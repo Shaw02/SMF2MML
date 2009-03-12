@@ -1,3 +1,12 @@
+/****************************************************************/
+/*																*/
+/*				SMF tp MML un-compiler							*/
+/*																*/
+/*								Programmed by.					*/
+/*									S.W.	(A.Watanabe)		*/
+/*																*/
+/****************************************************************/
+
 // smf2mml.cpp : コンソール アプリケーションのエントリ ポイントを定義します。
 //
 
@@ -8,7 +17,8 @@
 /*			プロトタイプ宣言									*/
 /*																*/
 /****************************************************************/
-extern		void uncompile(OPSW *OptionSW);
+extern		void	uncompile(OPSW *OptionSW);
+extern		size_t	getStreamSize(FILE *fStream);
 
 //●プロトタイプ宣言
 
@@ -34,32 +44,6 @@ void error(char *stErrMsg1, char *stErrMsg2){
 	if(stErrMsg2[0]!=0){printf(stErrMsg2);};
 	exit(EXIT_FAILURE);
 
-};
-/****************************************************************/
-/*																*/
-/*					汎用サブルーチン							*/
-/*																*/
-/****************************************************************/
-//==============================================================
-//		ストリームのサイズを得る
-//--------------------------------------------------------------
-//	●引数
-//			FileInfo *file	ファイル情報の構造体
-//	●返値
-//			file->size		ストリームのサイズ
-//==============================================================
-size_t getStreamSize(FileInfo *file){
-
-	//----------------------------------
-	//■Local 変数
-	size_t	ptCUR;
-
-	ptCUR=ftell(file->stream);				//ストリームのサイズを得る
-	fseek(file->stream,0,SEEK_END);			//ストリームのポインタを最後に
-	file->size=ftell(file->stream);			//ストリームのサイズを得る
-	fseek(file->stream,ptCUR,SEEK_SET);		//ストリームのポインタを元の位置に
-
-	return(ptCUR);
 };
 /****************************************************************/
 /*																*/
@@ -213,11 +197,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//SMFファイルの Open (read only)
 	if((OptionSW.SMF.stream=fopen(OptionSW.SMF.name,"rb"))==NULL){error(OptionSW.SMF.name,"");};
-	getStreamSize(&OptionSW.SMF);	//ファイルサイズの取得
-
-	//----------
-	//Debug用
-	printf("size=%d\n",OptionSW.SMF.size);	//ストリームサイズの表示
+	OptionSW.SMF.size=getStreamSize(OptionSW.SMF.stream);	//ファイルサイズの取得
 	//----------
 
 	//MMLファイルの Open (read only)

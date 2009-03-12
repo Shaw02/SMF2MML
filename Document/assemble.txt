@@ -1,0 +1,11 @@
+
+
+
+本アプリケーションは、Ｃ言語及び、アセンブリ言語で構成されおり、
+
+　・"Microsoft (R) Visual C++ 2008 Express Edition with SP1"	（無料）
+　　→http://www.microsoft.com/japan/msdn/vstudio/express/default.aspx
+
+でビルド出来る事を確認しています。
+
+								Ｓ．Ｗ．

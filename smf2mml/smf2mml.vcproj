@@ -207,6 +207,14 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\EventDecode.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\OutputMML.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\smf2mml.cpp"
 				>
 			</File>
@@ -233,6 +241,10 @@
 						UsePrecompiledHeader="1"
 					/>
 				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Subroutine.cpp"
+				>
 			</File>
 			<File
 				RelativePath=".\uncompile.cpp"

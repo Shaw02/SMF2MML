@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+            'http://www.w3.org/TR/html4/loose.dtd'>
+
+<html lang='ja'>
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html;charset=Shift_JIS'>
+	<meta http-equiv='Content-Style-Type' content='text/css'>
+	<link rel='stylesheet' type='text/css' href='doc.css'>
+	<title>SMF2MML</title>
+</head>
+
+<BODY>
+<!--────────────────────────────────────
+	ツールバー（レイヤー２）
+─────────────────────────────────────-->
+<div id='header'>
+
+<table>
+<tr><td width='640pt'><i>SMF2MML</i></td></tr>
+</table>
+<!--（↑このコンテンツの位置。）-->
+
+</div>
+<!--────────────────────────────────────
+	コンテンツ本体（レイヤー１）
+─────────────────────────────────────-->
+<div id='contents'>
+
+<h2>概要</h2>
+<!--─────────────────────────────-->
+このアプリケーションは、Standard MIDI Fileを
+<a href='http://oto.chu.jp/'>Sakura</a>仕様のMML(Music Macro Language)に逆コンパイルします。<br>
+<br>
+
+<br><br>
+<h2>動作条件</h2>
+<!--─────────────────────────────-->
+<h3>動作ＯＳ</h3>
+<ol type='1'>
+<li>Microsoft Windows 2000 SP4
+<li>Microsoft Windows XP
+<li>Microsoft Windows Vista
+<li>Microsoft Windows Server 2003
+</ol>
+<br>
+
+<h3>別途インストールが必要なソフト</h3>
+<ol type='1'>
+<li><a href="http://www.microsoft.com/downloads/details.aspx?familyid=A5C84275-3B97-4AB7-A40D-3802B2AF5FC2&displaylang=ja">Microsoft Visual C++ 2008 SP1 再頒布可能パッケージ (x86)</a>
+</ol>
+<br>
+
+<br><br>
+<h2>使用方法</h2>
+<!--─────────────────────────────-->
+コマンドラインに、次の通りに打ち込んでください。<br>
+尚、（）内は省略可能です。<br>
+<br>
+SMF2MML （/<var>option</var>） <var>ファイル名（.mid）</var><br>
+<br>
+<var>ファイル名(.mid)</var>は、逆コンパイルする元ファイルを指定します。<br>
+拡張子を省略した場合は、自動的に拡張子を".mid"とします。<br>
+拡張子がないファイルを指定する場合は、"<var>ファイル名１.</var>"とピリオドまで記述して下さい。<br>
+元ファイルは、SMFのFormat 0若しくはFormat 1である必要があります。<br>
+指定されたファイル名で、拡張子をmmlとしてmmlファイルを出力します。
+<br>
+^MMLの文法は、別途、<a href='http://oto.chu.jp'>Sakura</a>のドキュメントを参照して下さい。<br>
+
+<br>
+<h3>optionについて</h3>
+<table>
+<tr><th>指定	</th><th>挙動					<br></th></tr>
+<tr><td>	/?	</td><td>ヘルプを出力します。	<br></td></tr>
+</table>
+<br>
+
+<br><br>
+<h2>仕様</h2>
+<!--─────────────────────────────-->
+<ol type='1'>
+
+<li>Note On/ Note Offを、以下のMMLレベルの命令に分解します。
+<ul>
+	<li>v	… ヴェロシティ
+	<li>o	… オクターブ
+	<li>c ～ b	… 音程
+</ul>
+<li>音長は、付点13個まで対応しております。付点が13個以上つく場合は、『%』をつけ、tick表記となります。
+<li>1小節毎に『|』、4小節毎に『改行』を出力します。尚、拍子の変更でも改行します。
+</ol>
+
+<br><br>
+<h2>参考資料</h2>
+<!--─────────────────────────────-->
+<li><a href='assemble.txt'>ビルドの方法について</a><br>
+
+
+<br><br>
+<h2>改訂履歴</h2>
+<!--─────────────────────────────-->
+<li><a href='revision.txt'>改訂履歴</a><br>
+
+
+<br><br>
+</div>
+<!--────────────────────────────────────
+	フッター
+─────────────────────────────────────-->
+<div id='footer'>
+
+<table>
+<tr><td width='640pt' colspan='4'><i>SMF2MML</i><br></td></tr>
+</table>
+
+</div>
+<!--────────────────────────────────────-->
+</BODY>
+</html>
