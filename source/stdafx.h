@@ -40,9 +40,12 @@ typedef struct {
 
 //オプションスイッチ
 typedef struct {
-				FileInfo	SMF;
-				FileInfo	MML;
-				char		fHelp;
+				FileInfo	SMF;	//指定したSMFファイル
+				FileInfo	MML;	//指定したMMLファイル
+				char		fHelp;	//ヘルプを指定したか？
+	unsigned	int			iBar;	// | の挿入
+	unsigned	int			iCR;	//改行を挿入する小節数
+
 } OPSW;
 
 //MIDIヘッダー

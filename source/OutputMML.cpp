@@ -46,13 +46,9 @@ void OutputHex(OPSW *OptionSW,__int32 iSize){
 		fprintf(OptionSW->MML.stream,"$%X",cFread);
 		if(iSize>1){
 			fprintf(OptionSW->MML.stream,",");
-		} else {
-			fprintf(OptionSW->MML.stream,";");
 		};
 		iSize--;
 	};
-
-	fprintf(OptionSW->MML.stream," ");
 
 };
 //==============================================================
@@ -82,6 +78,19 @@ void OutputStrings(OPSW *OptionSW,__int32 iSize){
 
 };
 //==============================================================
+//		整形処理　オプションに応じて、設定する
+//--------------------------------------------------------------
+//	●引数
+//			OPSW		*OptionSW	オプションスイッチ構造体のポインタ
+//			unMMLinfo	*unMML		逆MML用構造体
+//	●返値
+//			無し
+//==============================================================
+void SetBarCr(OPSW *OptionSW,unMMLinfo *unMML){
+
+	
+};
+//==============================================================
 //		整形処理
 //--------------------------------------------------------------
 //	●引数
@@ -101,15 +110,21 @@ void OutputBarCr(OPSW *OptionSW,unMMLinfo *unMML){
 	};
 
 	//整形処理
-	if((unMML->iTicksCR)>=(unMML->BT[unMML->cntBT].iTicksOne<<2)){
-		unMML->iTicksBar-=unMML->BT[unMML->cntBT].iTicksOne;
-		unMML->iTicksCR-=(unMML->BT[unMML->cntBT].iTicksOne<<2);
-		fprintf(OptionSW->MML.stream,"\n	");
-	} else if((unMML->iTicksBar)>=(unMML->BT[unMML->cntBT].iTicksOne)) {
-		unMML->iTicksBar-=unMML->BT[unMML->cntBT].iTicksOne;
-		fprintf(OptionSW->MML.stream,"	| ");
-	};
+	//小節処理をしない場合は、機能させない。
+	if(OptionSW->iBar!=0){
+		//バーの挿入
+		if((unMML->iTicksBar)>=(unMML->BT[unMML->cntBT].iTicksOne)) {
+			unMML->iTicksBar-=unMML->BT[unMML->cntBT].iTicksOne;
+			fprintf(OptionSW->MML.stream,"	| ");
+		};
 
+		//改行するか？
+		//オプション /C0 だったら、音符毎に改行。 -1 で改行無し。
+		if((unMML->iTicksCR)>=(unMML->BT[unMML->cntBT].iTicksOne*OptionSW->iCR)) {
+			unMML->iTicksCR-=(unMML->BT[unMML->cntBT].iTicksOne*OptionSW->iCR);
+			fprintf(OptionSW->MML.stream,"\n	");
+		};
+	};
 };
 //==============================================================
 //		音長出力
@@ -208,40 +223,42 @@ void OutputTicks(OPSW *OptionSW,unMMLinfo *unMML){
 	//----------------------------------
 	//■音長の出力
 
-	//いまのTicksが、小節を越えるか？
-	iLength=(unMML->BT[unMML->cntBT].iTicksOne)-(unMML->iTicksBar);		//あと、何チックあるか？
-	if(iLength<(int)unMML->iTicks){
-		//最初でなければ、タイで繋ぐ
-		if(flagStart==1){
-			flagStart=0;
-		} else {
-			fprintf(OptionSW->MML.stream,"^");
+	//小節処理しない場合は、整形処理をしない。
+	if(OptionSW->iBar!=0){
+		//いまのTicksが、小節を越えるか？
+		iLength=(unMML->BT[unMML->cntBT].iTicksOne)-(unMML->iTicksBar);		//あと、何チックあるか？
+		if(iLength<(int)unMML->iTicks){
+			//最初でなければ、タイで繋ぐ
+			if(flagStart==1){
+				flagStart=0;
+			} else {
+				fprintf(OptionSW->MML.stream,"^");
+			};
+			Ticks2LengthEx(OptionSW,unMML,iLength);
+			unMML->iTicks-=iLength;
+			unMML->iTicksBar+=iLength;
+			unMML->iTicksCR+=iLength;
+			unMML->iTotalTicksChk+=iLength;
+			OutputBarCr(OptionSW,unMML);	//整形
 		};
-		Ticks2LengthEx(OptionSW,unMML,iLength);
-		unMML->iTicks-=iLength;
-		unMML->iTicksBar+=iLength;
-		unMML->iTicksCR+=iLength;
-		unMML->iTotalTicksChk+=iLength;
-		OutputBarCr(OptionSW,unMML);	//整形
 	};
 
-	//いまのTicksが、拍子記号を越えるか？
-	iLengthBT=(__int64)((unMML->BT[(unMML->cntBT)+1].iTicksBT)-(unMML->iTotalTicksChk));		//あと、何チックあるか？
-	if(iLengthBT<(__int64)(unMML->iTicks)){
-		//最初でなければ、タイで繋ぐ
-		if(flagStart==1){
-			flagStart=0;
-		} else {
-			fprintf(OptionSW->MML.stream,"^");
+		//いまのTicksが、拍子記号を越えるか？
+		iLengthBT=(__int64)((unMML->BT[(unMML->cntBT)+1].iTicksBT)-(unMML->iTotalTicksChk));		//あと、何チックあるか？
+		if(iLengthBT<(__int64)(unMML->iTicks)){
+			//最初でなければ、タイで繋ぐ
+			if(flagStart==1){
+				flagStart=0;
+			} else {
+				fprintf(OptionSW->MML.stream,"^");
+			};
+			Ticks2LengthEx(OptionSW,unMML,(int)iLengthBT);
+			unMML->iTicks-=(int)iLengthBT;
+			unMML->iTicksBar+=(int)iLengthBT;
+			unMML->iTicksCR+=(int)iLengthBT;
+			unMML->iTotalTicksChk+=iLengthBT;
+			OutputBarCr(OptionSW,unMML);	//整形
 		};
-		Ticks2LengthEx(OptionSW,unMML,(int)iLengthBT);
-		unMML->iTicks-=(int)iLengthBT;
-		unMML->iTicksBar+=(int)iLengthBT;
-		unMML->iTicksCR+=(int)iLengthBT;
-		unMML->iTotalTicksChk+=iLengthBT;
-		OutputBarCr(OptionSW,unMML);	//整形
-	};
-
 	//iTicks が 0 になるまで繰り返す。
 	while((unMML->iTicks)>0){
 
@@ -390,7 +407,8 @@ void OutputNote(OPSW *OptionSW,unMMLinfo *unMML){
 	//■初めての出力であれば、チャンネルを出力する。
 	if(unMML->flagCh==0){
 		unMML->flagCh=1;
-		fprintf(OptionSW->MML.stream,"\nTime(1:1:0);\n");
+		fprintf(OptionSW->MML.stream,"\nTime(1:1:0);\n	");
+		//Channel 1～
 		if((unMML->iChannel)>0){
 			if(unMML->SMF_Header.format==0){
 				fprintf(OptionSW->MML.stream,"TR(%d)",unMML->iChannel);	//format 0だったら、トラックも吐く

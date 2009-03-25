@@ -7,8 +7,8 @@
 ;								|
 ;===============================================================|
 
-	.386
-	.model	flat,c
+.386
+.model	flat,c
 
 ;****************************************************************
 ;*		プロトタイプ宣言				*
@@ -26,7 +26,6 @@ endian_b2l_D	proto	iValue:near32 ptr
 NoteScaleOut	proto	Stream:near32 ptr byte,
 			iScale:DWORD,
 			iNote:DWORD
-.code
 
 ;===============================================================|
 ;		Big Endian -> Little Endian			|
@@ -36,6 +35,7 @@ NoteScaleOut	proto	Stream:near32 ptr byte,
 ;	●引数							|
 ;		無し						|
 ;===============================================================|
+.code
 endian_b2l_W	proc	uses eax esi,
 	iValue:near32 ptr
 
@@ -78,7 +78,7 @@ endian_b2l_D	endp
 ;	●引数							|
 ;		eax	fprintf関数の戻り値			|
 ;===============================================================|
-	.const
+.const
 NoteScaleOut_Mes	db	"c*",0,0,	"d",0,0,0,	"d*",0,0,	"e",0,0,0,	"e*",0,0,	"f",0,0,0,	"g",0,0,0,	"g*",0,0,	"a",0,0,0,	"a*",0,0,	"b",0,0,0,	"`c",0,0	;in Gs	-6	0
 			db	"c",0,0,0,	"d",0,0,0,	"d*",0,0,	"e",0,0,0,	"e*",0,0,	"f",0,0,0,	"g",0,0,0,	"g*",0,0,	"a",0,0,0,	"a*",0,0,	"b",0,0,0,	"b*",0,0	;in Ds	-5	1
 			db	"c",0,0,0,	"d",0,0,0,	"d*",0,0,	"e",0,0,0,	"e*",0,0,	"f",0,0,0,	"g-",0,0,	"g",0,0,0,	"a",0,0,0,	"a*",0,0,	"b",0,0,0,	"b*",0,0	;in As	-4	2
@@ -93,28 +93,26 @@ NoteScaleOut_Mes	db	"c*",0,0,	"d",0,0,0,	"d*",0,0,	"e",0,0,0,	"e*",0,0,	"f",0,0,
 			db	"c*",0,0,	"c",0,0,0,	"d*",0,0,	"d",0,0,0,	"e",0,0,0,	"f*",0,0,	"f",0,0,0,	"g*",0,0,	"g",0,0,0,	"a*",0,0,	"a",0,0,0,	"b",0,0,0	;in H	+5	11
 			db	"c*",0,0,	"c",0,0,0,	"d*",0,0,	"d",0,0,0,	"e*",0,0,	"e",0,0,0,	"f",0,0,0,	"g*",0,0,	"g",0,0,0,	"a*",0,0,	"a",0,0,0,	"b",0,0,0	;in Fis	+6	12
 
-	.code
+.code
 NoteScaleOut	proc	uses ebx esi,
 		Stream:near32 ptr byte,
 		iScale:DWORD,
 		iNote:DWORD
-	
+
 		mov	esi,iScale
 		mov	ebx,iNote
 
 		lea	eax,[esi+6]		; eax = ( iScale + 6 )
 
 		.if	(eax<=12)
-			add	eax,eax		;
-			add	eax,eax		;
-			mov	esi,eax		;
-			add	eax,eax		;
-			add	eax,esi		; eax = ( iScale + 6 ) * 12
+			shl	eax,4		; eax = ( iScale + 6 ) * 16
+			mov	esi,eax
+			add	esi,eax
+			add	esi,eax		; esi = ( iScale + 6 ) * 48
 		.else
-			mov	eax,6*12
+			mov	esi,48 * 6
 		.endif
-		add	eax,ebx			; eax = ( iScale + 6 ) * 12 + iNote
-		lea	esi,[eax*4 + offset NoteScaleOut_Mes]
+		lea	esi,[esi + ebx*4 + offset NoteScaleOut_Mes]
 
 		invoke	fprintf,	Stream,esi
 
@@ -128,13 +126,24 @@ NoteScaleOut	endp
 ;	●引数							|
 ;		eax	printf関数の戻り値			|
 ;===============================================================|
-	.const
-print_help_mes	db	"smf2mml [ファイル名(.mid)] [/H]",0ah,0dh
+.const
+print_help_mes	db	"MML un-compiler for Standard MIDI File",0dh,0ah
+		db	"Copyright (C) S.W. (A.watanabe)",0dh,0ah
 		db	0ah,0dh
-		db	"  /H		ヘルプを表示します。",0ah,0dh
+		db	"smf2mml [ /options ] [file(.mid)]",0dh,0ah
+		db	0ah,0dh
+		db	"  /B[+/-]		小節線と改行の出力有無を指定する。(Defailt=+)",0dh,0ah
+		db	"			 +:Enable",0dh,0ah
+		db	"			 -:Disable",0dh,0ah
+		db	"  /C<number>		改行の設定を指定する。(Default=4)",0dh,0ah
+		db	"			 number>= 1 : 改行する小節数を指定する。",0dh,0ah
+		db	"			 number = 0 : 音符毎に改行する。",0dh,0ah
+		db	"			 number =-1 : 改行しない。",0dh,0ah
+		db	"  /Fm[file(.mml)]	.mmlファイル名を指定する。",0dh,0ah
+		db	"  /H			ヘルプを表示する。",0dh,0ah
 		db	0
 
-	.code
+.code
 print_help	proc	uses	eax
 	invoke	printf,
 		offset print_help_mes

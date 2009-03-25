@@ -312,7 +312,8 @@ void uncompile_Header(OPSW *OptionSW,unMMLinfo *unMML){
 	fprintf(OptionSW->MML.stream,"//	Format = %d \n",unMML->SMF_Header.format);
 	fprintf(OptionSW->MML.stream,"//	Track = %d \n",unMML->SMF_Header.track);
 	fprintf(OptionSW->MML.stream,"//\n");
-	fprintf(OptionSW->MML.stream,"System.TimeBase = %d \n",unMML->SMF_Header.timebase);
+	fprintf(OptionSW->MML.stream,"System.ControllerShift = 0;\n");
+	fprintf(OptionSW->MML.stream,"System.TimeBase = %d;\n",unMML->SMF_Header.timebase);
 	fprintf(OptionSW->MML.stream,"\n");
 
 	//まずは、4/4拍って事にしておく。
@@ -381,7 +382,7 @@ void uncompile(OPSW *OptionSW){
 		fprintf(OptionSW->MML.stream,"//MThd Infomation :\n");
 		fprintf(OptionSW->MML.stream,"//	Size = %d \n",unMML.iTrackSize);
 		fprintf(OptionSW->MML.stream,"//\n");
-		fprintf(OptionSW->MML.stream,"TR(%d)\n",(unMML.iTrack+1));
+		fprintf(OptionSW->MML.stream,"TR(%d)\n",(unMML.iTrack));
 
 		//チャンネル毎の処理
 		unMML.iChannel=0;

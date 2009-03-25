@@ -45,6 +45,22 @@ void error(char *stErrMsg1, char *stErrMsg2){
 	exit(EXIT_FAILURE);
 
 };
+//==============================================================
+//		エラー処理	（プロセスも終了する）
+//--------------------------------------------------------------
+//	●引数
+//			char *stErrMsg	エラーメッセージ
+//	●返値
+//			無し
+//==============================================================
+void opError(char *stErrMsg){
+
+	fprintf(stderr,"オプションが不正です。：");
+	fprintf(stderr,stErrMsg);
+	fprintf(stderr,"\n");
+	exit(EXIT_FAILURE);
+
+};
 /****************************************************************/
 /*																*/
 /*					メイン・サブルーチン						*/
@@ -68,6 +84,7 @@ void option(int argc, _TCHAR* argv[],OPSW *OptionSW){
 	//----------------------------------
 	//■Local 変数
 	int		iCount;				//whileのカウント用
+	int		iResult;			//汎用
 
 	//Option処理用
 	int		iOptionChk;			//オプションチェック用　ポインタ
@@ -81,7 +98,8 @@ void option(int argc, _TCHAR* argv[],OPSW *OptionSW){
 	OptionSW->SMF.name[0]=0;	//デフォルトはファイル名無し
 	OptionSW->MML.name[0]=0;	//デフォルトはファイル名無し
 	OptionSW->fHelp=0;			//ヘルプは、デフォルトは表示しない。
-								//　オプション指定 or ファる名が記述されない場合に出力
+	OptionSW->iBar=1;			// | 出力
+	OptionSW->iCR=4;			//改行の小節数
 
 	//----------------------------------
 	//■オプション処理
@@ -94,18 +112,83 @@ void option(int argc, _TCHAR* argv[],OPSW *OptionSW){
 
 			//--------------
 			//◆Option Switch	（スラッシュがあった場合の処理）
-			cOption=argv[iCount][1];
-			switch(cOption){
+			switch(argv[iCount][1]){
+				//--------
 				//Help表示
 				case 'h' :
 				case 'H' :
 				case '?' :
 					OptionSW->fHelp=1;
 					break;
+				//--------
+				//小節スイッチ
+				case 'B' :
+					switch(argv[iCount][2]){
+						case '-' :
+							OptionSW->iBar=0;
+							break;
+						case '+' :
+							OptionSW->iBar=1;
+							break;
+						default :
+							opError("/B");
+							break;
+					};
+					break;
+				//--------
+				//改行
+				case 'C' :
+					iResult=sscanf(argv[iCount],"/C%d",&OptionSW->iCR);
+					if((iResult==NULL)||(iResult==EOF)){
+						opError("/C");
+						break;
+					};
+					break;
+				//--------
+				//ファイルの指定
+				case 'F' :
+					//先に、ファイル名が書いてあるかチェック。
+					if(argv[iCount][3]==0){
+						opError("/F ファイル名が書いてありません。");
+						break;
+					};
+					switch(argv[iCount][2]){
+					//--------
+					//MMLファイルの指定
+					case 'm' :
+						//既に指定されている？
+						if(OptionSW->MML.name[0]==0){
+							iFlagFilnameExt=0;		//拡張子の有無　Reset
+							iOptionChk=0;		
+							while((cOption=argv[iCount][iOptionChk+3])!=0)
+							{
+								OptionSW->MML.name[iOptionChk]=cOption;
+								if(cOption=='.'){iFlagFilnameExt=1;};
+								iOptionChk++;
+							};
+							if(iFlagFilnameExt==0){
+								OptionSW->MML.name[iOptionChk++]='.';	//拡張子を".mid"にする。
+								OptionSW->MML.name[iOptionChk++]='m';	
+								OptionSW->MML.name[iOptionChk++]='m';	
+								OptionSW->MML.name[iOptionChk++]='l';	
+							};
+							OptionSW->MML.name[iOptionChk++]=0;	
+						} else {
+							opError("/F MMLファイルが2回以上指定されました。");
+							break;
+						};
+						break;
+					default :
+						opError("/F");
+						break;
+					};
+				break;
+				//
+
+				//--------
 				//デフォルト
 				default :
-					fprintf(stderr,"オプションが不正です。\n");
-					exit(EXIT_FAILURE);
+					opError("");
 					break;
 			};
 
@@ -113,33 +196,27 @@ void option(int argc, _TCHAR* argv[],OPSW *OptionSW){
 
 			//--------------
 			//◆ファイル名	（スラッシュが無かった場合の処理）
-			iFlagFilnameExt=0;		//拡張子の有無　Reset
-			iOptionChk=0;		
-			while((cOption=argv[iCount][iOptionChk])!=0)
-			{
-				OptionSW->SMF.name[iOptionChk]=cOption;
-				if(cOption=='.'){iFlagFilnameExt=1;};
-				iOptionChk++;
+			//既に指定されている？
+			if(OptionSW->SMF.name[0]==0){
+				iFlagFilnameExt=0;		//拡張子の有無　Reset
+				iOptionChk=0;		
+				while((cOption=argv[iCount][iOptionChk])!=0)
+				{
+					OptionSW->SMF.name[iOptionChk]=cOption;
+					if(cOption=='.'){iFlagFilnameExt=1;};
+					iOptionChk++;
+				};
+				if(iFlagFilnameExt==0){
+					OptionSW->SMF.name[iOptionChk++]='.';	//拡張子を".mid"にする。
+					OptionSW->SMF.name[iOptionChk++]='m';	
+					OptionSW->SMF.name[iOptionChk++]='i';	
+					OptionSW->SMF.name[iOptionChk++]='d';	
+				};
+				OptionSW->SMF.name[iOptionChk++]=0;	
+			} else {
+				opError("SMFファイルが2回以上指定されました。");
+				break;
 			};
-			if(iFlagFilnameExt==0){
-				OptionSW->SMF.name[iOptionChk++]='.';	//拡張子を".mid"にする。
-				OptionSW->SMF.name[iOptionChk++]='m';	
-				OptionSW->SMF.name[iOptionChk++]='i';	
-				OptionSW->SMF.name[iOptionChk++]='d';	
-			};
-			OptionSW->SMF.name[iOptionChk++]=0;	
-
-			iOptionChk=0;		
-			while((cOption=OptionSW->SMF.name[iOptionChk])!='.')
-			{
-				OptionSW->MML.name[iOptionChk]=cOption;
-				iOptionChk++;
-			};
-			OptionSW->MML.name[iOptionChk++]='.';	//拡張子を".mml"にする	
-			OptionSW->MML.name[iOptionChk++]='m';	
-			OptionSW->MML.name[iOptionChk++]='m';	
-			OptionSW->MML.name[iOptionChk++]='l';	
-			OptionSW->MML.name[iOptionChk++]=0;	
 
 		};
 
@@ -148,18 +225,35 @@ void option(int argc, _TCHAR* argv[],OPSW *OptionSW){
 		iCount++;
 	};
 
-	//--------------
-	//ファイル名が書かれなかった場合、ヘルプを表示する。
-	if(OptionSW->SMF.name[0]==0){OptionSW->fHelp=1;};
-
-
-
 	//----------------------------------
 	//◆オプションで指定された事を処理する。
 
 	//--------------
 	//ヘルプ表示
-	if(OptionSW->fHelp==1){print_help();};
+	//ファイル名が書かれなかった場合も、ヘルプを表示する。
+	if((OptionSW->fHelp==1)||(OptionSW->SMF.name[0]==0)){print_help();};
+
+	//--------------
+	//SMFファイルの指定が無かった場合
+	if(OptionSW->MML.name[0]==0){
+		iOptionChk=0;		
+		while((cOption=OptionSW->SMF.name[iOptionChk])!='.')
+		{
+			OptionSW->MML.name[iOptionChk]=cOption;
+			iOptionChk++;
+		};
+		OptionSW->MML.name[iOptionChk++]='.';	//拡張子を".mml"にする	
+		OptionSW->MML.name[iOptionChk++]='m';	
+		OptionSW->MML.name[iOptionChk++]='m';	
+		OptionSW->MML.name[iOptionChk++]='l';	
+		OptionSW->MML.name[iOptionChk++]=0;	
+	};
+
+	//--------------
+	//
+
+	//	to do	その他のオプションを追加したときは、この辺に追記する。
+
 
 };
 //==============================================================

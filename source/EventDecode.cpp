@@ -387,6 +387,7 @@ void DecodeSystemExcusiveMessage(OPSW *OptionSW,unMMLinfo *unMML){
 
 	fprintf(OptionSW->MML.stream,"SysEx = $F0,");
 	OutputHex(OptionSW,unMML->iSize);
+	fprintf(OptionSW->MML.stream,";\n	");
 
 };
 //==============================================================
@@ -402,6 +403,7 @@ void DecodeSystemCommonMessage(OPSW *OptionSW,unMMLinfo *unMML){
 
 	fprintf(OptionSW->MML.stream,"SysEx = ");
 	OutputHex(OptionSW,unMML->iSize);
+	fprintf(OptionSW->MML.stream,";\n	");
 
 };
 //==============================================================
@@ -626,7 +628,10 @@ void Decode1Command(OPSW *OptionSW,unMMLinfo *unMML){
 
 			//--------------
 			//音長の出力
-			OutputNote(OptionSW,unMML);
+			//但し、EoT時はしない。
+			if(unMML->flagEoT==0){
+				OutputNote(OptionSW,unMML);
+			};
 
 			//--------------
 			//メッセージ別処理
@@ -653,9 +658,15 @@ void Decode1Command(OPSW *OptionSW,unMMLinfo *unMML){
 					break;
 			};
 
-		//Channel 1以外だったら、ストリームのポインタだけ進める
+		//Channel 1以外だったら、
 		} else {
+			//EOTだったら、これまでのtick数の休符を出力する。
+			if((unMML->flagEoT==1)&&(unMML->flagCh==1)){
+				OutputNote(OptionSW,unMML);
+			};
+			//ストリームのポインタを進める
 			StreamPointerAdd(OptionSW->SMF.stream,unMML->iSize);
+
 		};
 
 	};
