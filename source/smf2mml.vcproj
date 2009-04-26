@@ -138,9 +138,10 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				UseUnicodeResponseFiles="false"
-				Optimization="2"
+				Optimization="3"
 				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="1"
+				EnableFiberSafeOptimizations="true"
 				WholeProgramOptimization="true"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				KeepComments="false"
@@ -167,6 +168,7 @@
 				ShowProgress="0"
 				LinkIncremental="1"
 				GenerateDebugInformation="false"
+				AssemblyDebug="1"
 				GenerateMapFile="true"
 				MapFileName="smf2mml.map"
 				MapExports="true"
@@ -207,11 +209,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\EventDecode.cpp"
+				RelativePath=".\FileOp.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\OutputMML.cpp"
+				RelativePath=".\Option.cpp"
 				>
 			</File>
 			<File
@@ -220,6 +222,18 @@
 			</File>
 			<File
 				RelativePath=".\smf2mml_sub.asm"
+				>
+			</File>
+			<File
+				RelativePath=".\smfEvent.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\smfMeta.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\smfMThd.cpp"
 				>
 			</File>
 			<File
@@ -243,11 +257,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\Subroutine.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\uncompile.cpp"
+				RelativePath=".\unMMLcompiler.cpp"
 				>
 			</File>
 		</Filter>
@@ -257,11 +267,35 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\FileOp.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Option.h"
+				>
+			</File>
+			<File
+				RelativePath=".\smfEvent.h"
+				>
+			</File>
+			<File
+				RelativePath=".\smfMeta.h"
+				>
+			</File>
+			<File
+				RelativePath=".\smfMThd.h"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.h"
 				>
 			</File>
 			<File
 				RelativePath=".\targetver.h"
+				>
+			</File>
+			<File
+				RelativePath=".\unMMLcompiler.h"
 				>
 			</File>
 		</Filter>

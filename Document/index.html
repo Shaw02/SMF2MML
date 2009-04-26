@@ -65,7 +65,7 @@ SMF2MML （/<var>option</var>） <var>ファイル名（.mid）</var><br>
 元ファイルは、SMFのFormat 0若しくはFormat 1である必要があります。<br>
 指定されたファイル名で、拡張子をmmlとしてmmlファイルを出力します。
 <br>
-^MMLの文法は、別途、<a href='http://oto.chu.jp'>Sakura</a>のドキュメントを参照して下さい。<br>
+MMLの文法は、別途、<a href='http://oto.chu.jp'>Sakura</a>のドキュメントを参照して下さい。<br>
 
 <br>
 <h3>optionについて</h3>
@@ -78,7 +78,16 @@ SMF2MML （/<var>option</var>） <var>ファイル名（.mid）</var><br>
 							number >= 1 : 改行する小節数を指定します。	<br>
 							number  = 0 : 音符毎に改行します。			<br>
 							number  =-1 : 改行しません。				<br></td></tr>
-<tr><td>	/Fm[file]	</td><td>.mmlファイル名を指定します。			<br></td></tr>
+<tr><td>	/J			</td><td>すととんで出力します。					<br>
+								　※すととんにない命令は、MMLとなります。<br></td></tr>
+<tr><td>	/MA			</td><td>Note on/off以外、全て出力しない。		<br></td></tr>
+<tr><td>	/Ma			</td><td>After Touch messageを出力しない。		<br></td></tr>
+<tr><td>	/Mc			</td><td>Control Change messageを出力しない。	<br></td></tr>
+<tr><td>	/Mp			</td><td>Program Change messageを出力しない。	<br></td></tr>
+<tr><td>	/Mb			</td><td>Pitch Bend Change messageを出力しない。<br></td></tr>
+<tr><td>	/Mx			</td><td>System Exclusive messageを出力しない。	<br></td></tr>
+<tr><td>	/Mm			</td><td>Meta Event messageを出力しない。		<br></td></tr>
+<tr><td>	/Fm[file]	</td><td>出力.mmlファイル名を指定します。		<br></td></tr>
 <tr><td>	/?			</td><td>ヘルプを出力します。					<br></td></tr>
 </table>
 <br>
@@ -95,7 +104,6 @@ SMF2MML （/<var>option</var>） <var>ファイル名（.mid）</var><br>
 	<li>c ～ b	… 音程
 </ul>
 <li>音長は、付点13個まで対応しております。付点が13個以上つく場合は、『%』をつけ、tick表記となります。
-<li>1小節毎に『|』、4小節毎に『改行』を出力します。尚、拍子の変更でも改行します。
 </ol>
 
 <br><br>
