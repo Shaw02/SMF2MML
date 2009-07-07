@@ -140,7 +140,7 @@
 				UseUnicodeResponseFiles="false"
 				Optimization="3"
 				EnableIntrinsicFunctions="true"
-				FavorSizeOrSpeed="1"
+				FavorSizeOrSpeed="2"
 				EnableFiberSafeOptimizations="true"
 				WholeProgramOptimization="true"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"

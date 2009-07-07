@@ -1,12 +1,12 @@
  smf2mml
 
- Timestamp is 49f53f66 (Mon Apr 27 14:15:18 2009)
+ Timestamp is 4a5315b0 (Tue Jul 07 18:30:24 2009)
 
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
- 0001:00000000 0000344aH .text                   CODE
- 0001:00003450 000001b1H .text$x                 CODE
+ 0001:00000000 00002c07H .text                   CODE
+ 0001:00002c07 00000137H .text$x                 CODE
  0002:00000000 00000148H .idata$5                DATA
  0002:00000148 00000004H .CRT$XCA                DATA
  0002:0000014c 00000004H .CRT$XCAA               DATA
@@ -15,18 +15,18 @@
  0002:00000158 00000004H .CRT$XIAA               DATA
  0002:0000015c 00000004H .CRT$XIY                DATA
  0002:00000160 00000004H .CRT$XIZ                DATA
- 0002:00000164 00000c9cH .rdata                  DATA
- 0002:00000e00 00000318H .rdata$r                DATA
- 0002:00001118 00000004H .rtc$IAA                DATA
- 0002:0000111c 00000004H .rtc$IZZ                DATA
- 0002:00001120 00000004H .rtc$TAA                DATA
- 0002:00001124 00000004H .rtc$TZZ                DATA
- 0002:00001128 0000028cH .xdata$x                DATA
- 0002:000013b4 0000003cH .idata$2                DATA
- 0002:000013f0 00000014H .idata$3                DATA
- 0002:00001404 00000148H .idata$4                DATA
- 0002:0000154c 00000bdeH .idata$6                DATA
- 0002:0000212a 00000000H .edata                  DATA
+ 0002:00000164 00000ca4H .rdata                  DATA
+ 0002:00000e08 00000318H .rdata$r                DATA
+ 0002:00001120 00000004H .rtc$IAA                DATA
+ 0002:00001124 00000004H .rtc$IZZ                DATA
+ 0002:00001128 00000004H .rtc$TAA                DATA
+ 0002:0000112c 00000004H .rtc$TZZ                DATA
+ 0002:00001130 0000021cH .xdata$x                DATA
+ 0002:0000134c 0000003cH .idata$2                DATA
+ 0002:00001388 00000014H .idata$3                DATA
+ 0002:0000139c 00000148H .idata$4                DATA
+ 0002:000014e4 00000bdeH .idata$6                DATA
+ 0002:000020c2 00000000H .edata                  DATA
  0003:00000000 000001b0H .data                   DATA
  0003:000001b0 00000374H .bss                    DATA
 
@@ -36,280 +36,279 @@
  0000:00000000       ___safe_se_handler_table   00000000     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00000000       ??0OPSW@@QAE@HQAPAD@Z      00401000 f   Option.obj
- 0001:00000490       ??0FileOp@@QAE@XZ          00401490 f i Option.obj
- 0001:00000520       ??_EFileOp@@UAEPAXI@Z      00401520 f i  CIL library: CIL module
- 0001:00000520       ??_GFileOp@@UAEPAXI@Z      00401520 f i Option.obj
- 0001:00000550       ??_DFileOp@@QAEXXZ         00401550 f i Option.obj
- 0001:000005c0       ?opError@OPSW@@QAEXPBD@Z   004015c0 f   Option.obj
- 0001:00000600       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00401600 f i Option.obj
- 0001:000007c0       ?fileopen@FileOp@@QAEXI@Z  004017c0 f i Option.obj
- 0001:00000810       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00401810 f i Option.obj
- 0001:000008a0       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004018a0 f i Option.obj
- 0001:000008c0       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004018c0 f i Option.obj
- 0001:00000940       ?not_smf@@YAXPBD@Z         00401940 f   smf2mml.obj
- 0001:00000970       _main                      00401970 f   smf2mml.obj
- 0001:00000a20       ??1SMF_MetaEvent@@QAE@XZ   00401a20 f i smf2mml.obj
- 0001:00000a30       ??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00401a30 f i smf2mml.obj
- 0001:00000ac0       ?DecodeVariable@SMF_event@@QAEIXZ 00401ac0 f   smfEvent.obj
- 0001:00000b00       ?EventRead@SMF_event@@QAEIXZ 00401b00 f   smfEvent.obj
- 0001:00000c50       ?Compare@SMF_MetaEvent@@CAHPBX0@Z 00401c50 f   smfMeta.obj
- 0001:00000c70       ?addRhythm@SMF_MetaEvent@@QAEX_KEEG@Z 00401c70 f   smfMeta.obj
- 0001:00000d00       ??0SMF_MThd@@QAE@PAVFileOp@@@Z 00401d00 f   smfMThd.obj
- 0001:00000dc0       ?OutputHex@unMMLcompiler@@AAEXXZ 00401dc0 f   unMMLcompiler.obj
- 0001:00000e50       ?OutputStrings@unMMLcompiler@@AAEXXZ 00401e50 f   unMMLcompiler.obj
- 0001:00000ea0       ?EncodeVariable@unMMLcompiler@@AAEXI@Z 00401ea0 f   unMMLcompiler.obj
- 0001:00000f20       ?OutputBarCr@unMMLcompiler@@AAEXXZ 00401f20 f   unMMLcompiler.obj
- 0001:00001070       ?Ticks2LengthEx@unMMLcompiler@@AAEXH@Z 00402070 f   unMMLcompiler.obj
- 0001:00001130       ?OutputTicks@unMMLcompiler@@AAEXXZ 00402130 f   unMMLcompiler.obj
- 0001:00001280       ?OutputNoteEx@unMMLcompiler@@AAEXXZ 00402280 f   unMMLcompiler.obj
- 0001:000014d0       ?DecodeNote@unMMLcompiler@@AAEXXZ 004024d0 f   unMMLcompiler.obj
- 0001:00001630       ?DecodeControlChange@unMMLcompiler@@AAEXXZ 00402630 f   unMMLcompiler.obj
- 0001:00001880       ?MetaSearch@unMMLcompiler@@AAEXXZ 00402880 f   unMMLcompiler.obj
- 0001:00001a20       ?Header@unMMLcompiler@@AAEXXZ 00402a20 f   unMMLcompiler.obj
- 0001:00001cc0       ?DecodeChannelVoiceMessage@unMMLcompiler@@AAEXXZ 00402cc0 f   unMMLcompiler.obj
- 0001:00001e10       ?DecodeSystemExcusiveMessage@unMMLcompiler@@AAEXXZ 00402e10 f   unMMLcompiler.obj
- 0001:00001e60       ?DecodeSystemCommonMessage@unMMLcompiler@@AAEXXZ 00402e60 f   unMMLcompiler.obj
- 0001:00001eb0       ?DecodeMetaEvent@unMMLcompiler@@AAEXXZ 00402eb0 f   unMMLcompiler.obj
- 0001:00002580       ?Decode1Command@unMMLcompiler@@AAEXXZ 00403580 f   unMMLcompiler.obj
- 0001:00002700       ?uncompile@unMMLcompiler@@QAEXXZ 00403700 f   unMMLcompiler.obj
- 0001:000028e0       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 004038e0 f i unMMLcompiler.obj
- 0001:00002a80       ?dec@std@@YAAAVios_base@1@AAV21@@Z 00403a80 f i unMMLcompiler.obj
- 0001:00002aa0       ?hex@std@@YAAAVios_base@1@AAV21@@Z 00403aa0 f i unMMLcompiler.obj
- 0001:00002ab8       _endian_b2l_W              00403ab8 f   smf2mml_sub.obj
- 0001:00002acc       _endian_b2l_D              00403acc f   smf2mml_sub.obj
- 0001:00002af1       _print_help                00403af1 f   smf2mml_sub.obj
- 0001:00002b0b       ??_U@YAPAXI@Z              00403b0b f   msvcprt:newaop_s.obj
- 0001:00002b16       @__security_check_cookie@4 00403b16 f   MSVCRT:secchk.obj
- 0001:00002b26       ??2@YAPAXI@Z               00403b26 f   MSVCRT:MSVCR90.dll
- 0001:00002b2c       ??3@YAXPAX@Z               00403b2c f   MSVCRT:MSVCR90.dll
- 0001:00002b32       ??_Etype_info@@UAEPAXI@Z   00403b32 f i MSVCRT:ti_inst.obj
- 0001:00002b7e       _exit                      00403b7e f   MSVCRT:MSVCR90.dll
- 0001:00002b84       _printf                    00403b84 f   MSVCRT:MSVCR90.dll
- 0001:00002e2c       _mainCRTStartup            00403e2c f   MSVCRT:crtexe.obj
- 0001:00002e36       ___report_gsfailure        00403e36 f   MSVCRT:gs_report.obj
- 0001:00002f3c       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 00403f3c f   MSVCRT:ehvecdtr.obj
- 0001:00002f9a       ??_M@YGXPAXIHP6EX0@Z@Z     00403f9a f   MSVCRT:ehvecdtr.obj
- 0001:00002ffd       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 00403ffd f   MSVCRT:unhandld.obj
- 0001:0000303f       ___CxxSetUnhandledExceptionFilter 0040403f f   MSVCRT:unhandld.obj
- 0001:0000304e       __amsg_exit                0040404e f   MSVCRT:MSVCR90.dll
- 0001:00003054       __onexit                   00404054 f   MSVCRT:atonexit.obj
- 0001:000030f9       _atexit                    004040f9 f   MSVCRT:atonexit.obj
- 0001:00003110       __RTC_Initialize           00404110 f   MSVCRT:_initsect_.obj
- 0001:00003136       __RTC_Terminate            00404136 f   MSVCRT:_initsect_.obj
- 0001:0000315c       __XcptFilter               0040415c f   MSVCRT:MSVCR90.dll
- 0001:00003170       __ValidateImageBase        00404170 f   MSVCRT:pesect.obj
- 0001:000031b0       __FindPESection            004041b0 f   MSVCRT:pesect.obj
- 0001:00003200       __IsNonwritableInCurrentImage 00404200 f   MSVCRT:pesect.obj
- 0001:000032be       __initterm                 004042be f   MSVCRT:MSVCR90.dll
- 0001:000032c4       __initterm_e               004042c4 f   MSVCRT:MSVCR90.dll
- 0001:000032cc       __SEH_prolog4              004042cc f   MSVCRT:sehprolg4.obj
- 0001:00003311       __SEH_epilog4              00404311 f   MSVCRT:sehprolg4.obj
- 0001:00003325       __except_handler4          00404325 f   MSVCRT:chandler4gs.obj
- 0001:0000334a       __setdefaultprecision      0040434a f   MSVCRT:fp8.obj
- 0001:00003375       __setargv                  00404375 f   MSVCRT:dllargv.obj
- 0001:00003375       __matherr                  00404375 f   MSVCRT:merr.obj
- 0001:00003378       ___security_init_cookie    00404378 f   MSVCRT:gs_support.obj
- 0001:0000340e       __crt_debugger_hook        0040440e f   MSVCRT:MSVCR90.dll
- 0001:00003414       ?terminate@@YAXXZ          00404414 f   MSVCRT:MSVCR90.dll
- 0001:0000341a       ??1type_info@@UAE@XZ       0040441a f   MSVCRT:MSVCR90.dll
- 0001:0000341a       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 0040441a f   MSVCRT:MSVCR90.dll
- 0001:00003420       __unlock                   00404420 f   MSVCRT:MSVCR90.dll
- 0001:00003426       ___dllonexit               00404426 f   MSVCRT:MSVCR90.dll
- 0001:0000342c       __lock                     0040442c f   MSVCRT:MSVCR90.dll
- 0001:00003432       __except_handler4_common   00404432 f   MSVCRT:MSVCR90.dll
- 0001:00003438       __invoke_watson            00404438 f   MSVCRT:MSVCR90.dll
- 0001:0000343e       __controlfp_s              0040443e f   MSVCRT:MSVCR90.dll
- 0001:00003444       ___CxxFrameHandler3        00404444 f   MSVCRT:MSVCR90.dll
- 0002:00000000       __imp__Sleep@4             00405000     kernel32:KERNEL32.dll
- 0002:00000004       __imp__InterlockedCompareExchange@12 00405004     kernel32:KERNEL32.dll
- 0002:00000008       __imp__TerminateProcess@8  00405008     kernel32:KERNEL32.dll
- 0002:0000000c       __imp__GetCurrentProcess@0 0040500c     kernel32:KERNEL32.dll
- 0002:00000010       __imp__UnhandledExceptionFilter@4 00405010     kernel32:KERNEL32.dll
- 0002:00000014       __imp__SetUnhandledExceptionFilter@4 00405014     kernel32:KERNEL32.dll
- 0002:00000018       __imp__IsDebuggerPresent@0 00405018     kernel32:KERNEL32.dll
- 0002:0000001c       __imp__QueryPerformanceCounter@4 0040501c     kernel32:KERNEL32.dll
- 0002:00000020       __imp__GetTickCount@0      00405020     kernel32:KERNEL32.dll
- 0002:00000024       __imp__GetCurrentThreadId@0 00405024     kernel32:KERNEL32.dll
- 0002:00000028       __imp__GetCurrentProcessId@0 00405028     kernel32:KERNEL32.dll
- 0002:0000002c       __imp__GetSystemTimeAsFileTime@4 0040502c     kernel32:KERNEL32.dll
- 0002:00000030       __imp__InterlockedExchange@8 00405030     kernel32:KERNEL32.dll
- 0002:00000034       \177KERNEL32_NULL_THUNK_DATA 00405034     kernel32:KERNEL32.dll
- 0002:00000038       __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z 00405038     msvcprt:MSVCP90.dll
- 0002:0000003c       __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ 0040503c     msvcprt:MSVCP90.dll
- 0002:00000040       __imp_?uncaught_exception@std@@YA_NXZ 00405040     msvcprt:MSVCP90.dll
- 0002:00000044       __imp_?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ 00405044     msvcprt:MSVCP90.dll
- 0002:00000048       __imp_?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ 00405048     msvcprt:MSVCP90.dll
- 0002:0000004c       __imp_?open@?$basic_fstream@DU?$char_traits@D@std@@@std@@QAEXPBDI@Z 0040504c     msvcprt:MSVCP90.dll
- 0002:00000050       __imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 00405050     msvcprt:MSVCP90.dll
- 0002:00000054       __imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ 00405054     msvcprt:MSVCP90.dll
- 0002:00000058       __imp_??1?$basic_fstream@DU?$char_traits@D@std@@@std@@UAE@XZ 00405058     msvcprt:MSVCP90.dll
- 0002:0000005c       __imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 0040505c     msvcprt:MSVCP90.dll
- 0002:00000060       __imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHPBDH@Z 00405060     msvcprt:MSVCP90.dll
- 0002:00000064       __imp_??0?$basic_fstream@DU?$char_traits@D@std@@@std@@QAE@XZ 00405064     msvcprt:MSVCP90.dll
- 0002:00000068       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z 00405068     msvcprt:MSVCP90.dll
- 0002:0000006c       __imp_??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ 0040506c     msvcprt:MSVCP90.dll
- 0002:00000070       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z 00405070     msvcprt:MSVCP90.dll
- 0002:00000074       __imp_?read@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@PADH@Z 00405074     msvcprt:MSVCP90.dll
- 0002:00000078       __imp_?seekg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@JH@Z 00405078     msvcprt:MSVCP90.dll
- 0002:0000007c       __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z 0040507c     msvcprt:MSVCP90.dll
- 0002:00000080       __imp_?tellg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE?AV?$fpos@H@2@XZ 00405080     msvcprt:MSVCP90.dll
- 0002:00000084       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z 00405084     msvcprt:MSVCP90.dll
- 0002:00000088       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z 00405088     msvcprt:MSVCP90.dll
- 0002:0000008c       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@G@Z 0040508c     msvcprt:MSVCP90.dll
- 0002:00000090       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAVios_base@1@AAV21@@Z@Z 00405090     msvcprt:MSVCP90.dll
- 0002:00000094       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@D@Z 00405094     msvcprt:MSVCP90.dll
- 0002:00000098       __imp_??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 00405098     msvcprt:MSVCP90.dll
- 0002:0000009c       __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z 0040509c     msvcprt:MSVCP90.dll
- 0002:000000a0       __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ 004050a0     msvcprt:MSVCP90.dll
- 0002:000000a4       __imp_?endl@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@1@AAV21@@Z 004050a4     msvcprt:MSVCP90.dll
- 0002:000000a8       __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 004050a8     msvcprt:MSVCP90.dll
- 0002:000000ac       __imp_??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 004050ac     msvcprt:MSVCP90.dll
- 0002:000000b0       __imp_??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAADI@Z 004050b0     msvcprt:MSVCP90.dll
- 0002:000000b4       \177MSVCP90_NULL_THUNK_DATA 004050b4     msvcprt:MSVCP90.dll
- 0002:000000b8       __imp___initterm           004050b8     MSVCRT:MSVCR90.dll
- 0002:000000bc       __imp___initterm_e         004050bc     MSVCRT:MSVCR90.dll
- 0002:000000c0       __imp___configthreadlocale 004050c0     MSVCRT:MSVCR90.dll
- 0002:000000c4       __imp____setusermatherr    004050c4     MSVCRT:MSVCR90.dll
- 0002:000000c8       __imp___adjust_fdiv        004050c8     MSVCRT:MSVCR90.dll
- 0002:000000cc       __imp____p__commode        004050cc     MSVCRT:MSVCR90.dll
- 0002:000000d0       __imp____p__fmode          004050d0     MSVCRT:MSVCR90.dll
- 0002:000000d4       __imp___encode_pointer     004050d4     MSVCRT:MSVCR90.dll
- 0002:000000d8       __imp____set_app_type      004050d8     MSVCRT:MSVCR90.dll
- 0002:000000dc       __imp___crt_debugger_hook  004050dc     MSVCRT:MSVCR90.dll
- 0002:000000e0       __imp_?terminate@@YAXXZ    004050e0     MSVCRT:MSVCR90.dll
- 0002:000000e4       __imp_?_type_info_dtor_internal_method@type_info@@QAEXXZ 004050e4     MSVCRT:MSVCR90.dll
- 0002:000000e8       __imp___unlock             004050e8     MSVCRT:MSVCR90.dll
- 0002:000000ec       __imp____dllonexit         004050ec     MSVCRT:MSVCR90.dll
- 0002:000000f0       __imp___lock               004050f0     MSVCRT:MSVCR90.dll
- 0002:000000f4       __imp___onexit             004050f4     MSVCRT:MSVCR90.dll
- 0002:000000f8       __imp___decode_pointer     004050f8     MSVCRT:MSVCR90.dll
- 0002:000000fc       __imp___except_handler4_common 004050fc     MSVCRT:MSVCR90.dll
- 0002:00000100       __imp___invoke_watson      00405100     MSVCRT:MSVCR90.dll
- 0002:00000104       __imp___controlfp_s        00405104     MSVCRT:MSVCR90.dll
- 0002:00000108       __imp____initenv           00405108     MSVCRT:MSVCR90.dll
- 0002:0000010c       __imp___XcptFilter         0040510c     MSVCRT:MSVCR90.dll
- 0002:00000110       __imp___exit               00405110     MSVCRT:MSVCR90.dll
- 0002:00000114       __imp___cexit              00405114     MSVCRT:MSVCR90.dll
- 0002:00000118       __imp____getmainargs       00405118     MSVCRT:MSVCR90.dll
- 0002:0000011c       __imp___amsg_exit          0040511c     MSVCRT:MSVCR90.dll
- 0002:00000120       __imp__qsort               00405120     MSVCRT:MSVCR90.dll
- 0002:00000124       __imp___lfind              00405124     MSVCRT:MSVCR90.dll
- 0002:00000128       __imp__printf              00405128     MSVCRT:MSVCR90.dll
- 0002:0000012c       __imp__perror              0040512c     MSVCRT:MSVCR90.dll
- 0002:00000130       __imp__exit                00405130     MSVCRT:MSVCR90.dll
- 0002:00000134       __imp__sscanf              00405134     MSVCRT:MSVCR90.dll
- 0002:00000138       __imp_??2@YAPAXI@Z         00405138     MSVCRT:MSVCR90.dll
- 0002:0000013c       __imp_??3@YAXPAX@Z         0040513c     MSVCRT:MSVCR90.dll
- 0002:00000140       __imp____CxxFrameHandler3  00405140     MSVCRT:MSVCR90.dll
- 0002:00000144       \177MSVCR90_NULL_THUNK_DATA 00405144     MSVCRT:MSVCR90.dll
- 0002:00000148       ___xc_a                    00405148     MSVCRT:cinitexe.obj
- 0002:00000150       ___xc_z                    00405150     MSVCRT:cinitexe.obj
- 0002:00000154       ___xi_a                    00405154     MSVCRT:cinitexe.obj
- 0002:00000160       ___xi_z                    00405160     MSVCRT:cinitexe.obj
- 0002:000004c0       ??_C@_0P@GHFPNOJB@bad?5allocation?$AA@ 004054c0     msvcprt:newaop_s.obj
- 0002:000004d4       ??_7type_info@@6B@         004054d4     MSVCRT:ti_inst.obj
- 0002:00000dec       ??_7FileOp@@6B@            00405dec     Option.obj
- 0002:00000df0       ??_8FileOp@@7B?$basic_istream@DU?$char_traits@D@std@@@std@@@ 00405df0     Option.obj
- 0002:00000df8       ??_8FileOp@@7B?$basic_ostream@DU?$char_traits@D@std@@@std@@@ 00405df8     Option.obj
- 0002:00000e00       ??_R4type_info@@6B@        00405e00     MSVCRT:ti_inst.obj
- 0002:00000e14       ??_R3type_info@@8          00405e14     MSVCRT:ti_inst.obj
- 0002:00000e24       ??_R2type_info@@8          00405e24     MSVCRT:ti_inst.obj
- 0002:00000e2c       ??_R1A@?0A@EA@type_info@@8 00405e2c     MSVCRT:ti_inst.obj
- 0002:00000e48       ??_R4FileOp@@6B@           00405e48     Option.obj
- 0002:00000e5c       ??_R3FileOp@@8             00405e5c     Option.obj
- 0002:00000e6c       ??_R2FileOp@@8             00405e6c     Option.obj
- 0002:00000e9c       ??_R1A@?0A@EA@?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00405e9c     Option.obj
- 0002:00000eb8       ??_R3?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00405eb8     Option.obj
- 0002:00000ec8       ??_R2?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00405ec8     Option.obj
- 0002:00000ef4       ??_R1A@?0A@EA@?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00405ef4     Option.obj
- 0002:00000f10       ??_R3?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00405f10     Option.obj
- 0002:00000f20       ??_R2?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00405f20     Option.obj
- 0002:00000f48       ??_R17?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00405f48     Option.obj
- 0002:00000f64       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00405f64     Option.obj
- 0002:00000f74       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00405f74     Option.obj
- 0002:00000f88       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00405f88     Option.obj
- 0002:00000fa4       ??_R1A@?0A@EA@?$basic_istream@DU?$char_traits@D@std@@@std@@8 00405fa4     Option.obj
- 0002:00000fc0       ??_R3?$basic_istream@DU?$char_traits@D@std@@@std@@8 00405fc0     Option.obj
- 0002:00000fd0       ??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8 00405fd0     Option.obj
- 0002:00000fe4       ??_R13A@3EA@?$_Iosb@H@std@@8 00405fe4     Option.obj
- 0002:00001000       ??_R1A@A@3EA@ios_base@std@@8 00406000     Option.obj
- 0002:0000101c       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 0040601c     Option.obj
- 0002:00001038       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 00406038     Option.obj
- 0002:00001048       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 00406048     Option.obj
- 0002:00001058       ??_R1A@?0A@EA@ios_base@std@@8 00406058     Option.obj
- 0002:00001074       ??_R3ios_base@std@@8       00406074     Option.obj
- 0002:00001084       ??_R2ios_base@std@@8       00406084     Option.obj
- 0002:00001090       ??_R13?0A@EA@?$_Iosb@H@std@@8 00406090     Option.obj
- 0002:000010ac       ??_R3?$_Iosb@H@std@@8      004060ac     Option.obj
- 0002:000010bc       ??_R2?$_Iosb@H@std@@8      004060bc     Option.obj
- 0002:000010c4       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 004060c4     Option.obj
- 0002:000010e0       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 004060e0     Option.obj
- 0002:000010fc       ??_R1A@?0A@EA@FileOp@@8    004060fc     Option.obj
- 0002:00001118       ___rtc_iaa                 00406118     MSVCRT:_initsect_.obj
- 0002:0000111c       ___rtc_izz                 0040611c     MSVCRT:_initsect_.obj
- 0002:00001120       ___rtc_taa                 00406120     MSVCRT:_initsect_.obj
- 0002:00001124       ___rtc_tzz                 00406124     MSVCRT:_initsect_.obj
- 0002:000013b4       __IMPORT_DESCRIPTOR_MSVCP90 004063b4     msvcprt:MSVCP90.dll
- 0002:000013c8       __IMPORT_DESCRIPTOR_MSVCR90 004063c8     MSVCRT:MSVCR90.dll
- 0002:000013dc       __IMPORT_DESCRIPTOR_KERNEL32 004063dc     kernel32:KERNEL32.dll
- 0002:000013f0       __NULL_IMPORT_DESCRIPTOR   004063f0     msvcprt:MSVCP90.dll
- 0003:00000004       ??_R0?AVtype_info@@@8      00408004     MSVCRT:ti_inst.obj
- 0003:0000001c       ___security_cookie         0040801c     MSVCRT:gs_cookie.obj
- 0003:00000020       ___security_cookie_complement 00408020     MSVCRT:gs_cookie.obj
- 0003:00000024       ___native_dllmain_reason   00408024     MSVCRT:natstart.obj
- 0003:00000028       ___native_vcclrit_reason   00408028     MSVCRT:natstart.obj
- 0003:0000002c       ___globallocalestatus      0040802c     MSVCRT:xthdloc.obj
- 0003:00000030       ___defaultmatherr          00408030     MSVCRT:merr.obj
- 0003:00000034       ??_R0?AV?$basic_ostream@DU?$char_traits@D@std@@@std@@@8 00408034     Option.obj
- 0003:00000070       ??_R0?AV?$_Iosb@H@std@@@8  00408070     Option.obj
- 0003:0000008c       ??_R0?AVios_base@std@@@8   0040808c     Option.obj
- 0003:000000a8       ??_R0?AV?$basic_ios@DU?$char_traits@D@std@@@std@@@8 004080a8     Option.obj
- 0003:000000e0       ??_R0?AV?$basic_istream@DU?$char_traits@D@std@@@std@@@8 004080e0     Option.obj
- 0003:0000011c       ??_R0?AV?$basic_iostream@DU?$char_traits@D@std@@@std@@@8 0040811c     Option.obj
- 0003:00000158       ??_R0?AV?$basic_fstream@DU?$char_traits@D@std@@@std@@@8 00408158     Option.obj
- 0003:00000194       ??_R0?AVFileOp@@@8         00408194     Option.obj
- 0003:000004f4       __forceCRTManifestRTM      004084f4     MSVCRT:crtmanifestrtm.obj
- 0003:000004f8       __dowildcard               004084f8     MSVCRT:wildcard.obj
- 0003:000004fc       __newmode                  004084fc     MSVCRT:_newmode.obj
- 0003:00000500       __commode                  00408500     MSVCRT:xncommod.obj
- 0003:00000504       __fmode                    00408504     MSVCRT:xtxtmode.obj
- 0003:00000508       ___@@_PchSym_@00@UwlxfnvmghLzmwLhvggrmthUzRdzgzmzyvUnbLwlxfnvmghUerhfzoLhgfwrlLCAAIUkilqvxghUkilqvxgBUhnuCnnoUhnuCnnoUivovzhvUhgwzucOlyq@ 00408508     stdafx.obj
- 0003:0000050c       __adjust_fdiv              0040850c     <common>
- 0003:00000510       ___native_startup_state    00408510     <common>
- 0003:00000514       ___native_startup_lock     00408514     <common>
- 0003:00000518       ___onexitend               00408518     <common>
- 0003:0000051c       ___onexitbegin             0040851c     <common>
- 0003:00000520       ___dyn_tls_init_callback   00408520     <common>
+ 0001:000003a9       ??0FileOp@@QAE@XZ          004013a9 f i Option.obj
+ 0001:00000408       ??_EFileOp@@UAEPAXI@Z      00401408 f i  CIL library: CIL module
+ 0001:00000408       ??_GFileOp@@UAEPAXI@Z      00401408 f i Option.obj
+ 0001:00000459       ?opError@OPSW@@QAEXPBD@Z   00401459 f   Option.obj
+ 0001:00000492       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00401492 f i Option.obj
+ 0001:000005d7       ?fileopen@FileOp@@QAEXI@Z  004015d7 f i Option.obj
+ 0001:00000623       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00401623 f i Option.obj
+ 0001:00000681       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00401681 f i Option.obj
+ 0001:00000699       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00401699 f i Option.obj
+ 0001:000006e1       ?not_smf@@YAXPBD@Z         004016e1 f   smf2mml.obj
+ 0001:0000070a       _main                      0040170a f   smf2mml.obj
+ 0001:00000776       ??1SMF_MetaEvent@@QAE@XZ   00401776 f i smf2mml.obj
+ 0001:00000780       ??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00401780 f i smf2mml.obj
+ 0001:000007d5       ?DecodeVariable@SMF_event@@QAEIXZ 004017d5 f   smfEvent.obj
+ 0001:000007fe       ?EventRead@SMF_event@@QAEIXZ 004017fe f   smfEvent.obj
+ 0001:000008f4       ?Read@SMF_event@@QAEEXZ    004018f4 f i smfEvent.obj
+ 0001:00000910       ?Compare@SMF_MetaEvent@@CAHPBX0@Z 00401910 f   smfMeta.obj
+ 0001:00000929       ?addRhythm@SMF_MetaEvent@@QAEX_KEEG@Z 00401929 f   smfMeta.obj
+ 0001:000009ac       ??0SMF_MThd@@QAE@PAVFileOp@@@Z 004019ac f   smfMThd.obj
+ 0001:00000a50       ?initTR@unMMLcompiler@@AAEXXZ 00401a50 f   unMMLcompiler.obj
+ 0001:00000aa7       ?initCH@unMMLcompiler@@AAEXXZ 00401aa7 f   unMMLcompiler.obj
+ 0001:00000af8       ?OutputHex@unMMLcompiler@@AAEXXZ 00401af8 f   unMMLcompiler.obj
+ 0001:00000b70       ?OutputStrings@unMMLcompiler@@AAEXXZ 00401b70 f   unMMLcompiler.obj
+ 0001:00000bb4       ?EncodeVariable@unMMLcompiler@@AAEXI@Z 00401bb4 f   unMMLcompiler.obj
+ 0001:00000c3a       ?OutputBarCr@unMMLcompiler@@AAEXXZ 00401c3a f   unMMLcompiler.obj
+ 0001:00000d65       ?Ticks2LengthEx@unMMLcompiler@@AAEXH@Z 00401d65 f   unMMLcompiler.obj
+ 0001:00000df3       ?OutputTicks@unMMLcompiler@@AAEXXZ 00401df3 f   unMMLcompiler.obj
+ 0001:00000f29       ?OutputNoteEx@unMMLcompiler@@AAEXXZ 00401f29 f   unMMLcompiler.obj
+ 0001:0000112c       ?DecodeNote@unMMLcompiler@@AAEXXZ 0040212c f   unMMLcompiler.obj
+ 0001:00001288       ?DecodeControlChange@unMMLcompiler@@AAEXXZ 00402288 f   unMMLcompiler.obj
+ 0001:00001466       ?MetaSearch@unMMLcompiler@@AAEXXZ 00402466 f   unMMLcompiler.obj
+ 0001:0000155a       ?Header@unMMLcompiler@@AAEXXZ 0040255a f   unMMLcompiler.obj
+ 0001:00001812       ?DecodeChannelVoiceMessage@unMMLcompiler@@AAEXXZ 00402812 f   unMMLcompiler.obj
+ 0001:00001949       ?DecodeSystemExcusiveMessage@unMMLcompiler@@AAEXXZ 00402949 f   unMMLcompiler.obj
+ 0001:00001989       ?DecodeSystemCommonMessage@unMMLcompiler@@AAEXXZ 00402989 f   unMMLcompiler.obj
+ 0001:000019c9       ?DecodeMetaEvent@unMMLcompiler@@AAEXXZ 004029c9 f   unMMLcompiler.obj
+ 0001:00001efe       ?Decode1Command@unMMLcompiler@@AAEXXZ 00402efe f   unMMLcompiler.obj
+ 0001:00002097       ?uncompile@unMMLcompiler@@QAEXXZ 00403097 f   unMMLcompiler.obj
+ 0001:000021d6       ?dec@std@@YAAAVios_base@1@AAV21@@Z 004031d6 f i unMMLcompiler.obj
+ 0001:000021ed       ?hex@std@@YAAAVios_base@1@AAV21@@Z 004031ed f i unMMLcompiler.obj
+ 0001:00002204       _endian_b2l_W              00403204 f   smf2mml_sub.obj
+ 0001:00002218       _endian_b2l_D              00403218 f   smf2mml_sub.obj
+ 0001:0000223d       _print_help                0040323d f   smf2mml_sub.obj
+ 0001:00002257       ??_U@YAPAXI@Z              00403257 f   msvcprt:newaop_s.obj
+ 0001:00002262       @__security_check_cookie@4 00403262 f   MSVCRT:secchk.obj
+ 0001:00002272       ??2@YAPAXI@Z               00403272 f   MSVCRT:MSVCR90.dll
+ 0001:00002278       ??3@YAXPAX@Z               00403278 f   MSVCRT:MSVCR90.dll
+ 0001:0000227e       ??_Etype_info@@UAEPAXI@Z   0040327e f i MSVCRT:ti_inst.obj
+ 0001:000022ca       _exit                      004032ca f   MSVCRT:MSVCR90.dll
+ 0001:000022d0       _printf                    004032d0 f   MSVCRT:MSVCR90.dll
+ 0001:00002578       _mainCRTStartup            00403578 f   MSVCRT:crtexe.obj
+ 0001:00002582       ___report_gsfailure        00403582 f   MSVCRT:gs_report.obj
+ 0001:00002688       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 00403688 f   MSVCRT:ehvecdtr.obj
+ 0001:000026e6       ??_M@YGXPAXIHP6EX0@Z@Z     004036e6 f   MSVCRT:ehvecdtr.obj
+ 0001:00002749       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 00403749 f   MSVCRT:unhandld.obj
+ 0001:0000278b       ___CxxSetUnhandledExceptionFilter 0040378b f   MSVCRT:unhandld.obj
+ 0001:0000279a       __amsg_exit                0040379a f   MSVCRT:MSVCR90.dll
+ 0001:000027a0       __onexit                   004037a0 f   MSVCRT:atonexit.obj
+ 0001:00002845       _atexit                    00403845 f   MSVCRT:atonexit.obj
+ 0001:0000285c       __RTC_Initialize           0040385c f   MSVCRT:_initsect_.obj
+ 0001:00002882       __RTC_Terminate            00403882 f   MSVCRT:_initsect_.obj
+ 0001:000028a8       __XcptFilter               004038a8 f   MSVCRT:MSVCR90.dll
+ 0001:000028b0       __ValidateImageBase        004038b0 f   MSVCRT:pesect.obj
+ 0001:000028f0       __FindPESection            004038f0 f   MSVCRT:pesect.obj
+ 0001:00002940       __IsNonwritableInCurrentImage 00403940 f   MSVCRT:pesect.obj
+ 0001:000029fe       __initterm                 004039fe f   MSVCRT:MSVCR90.dll
+ 0001:00002a04       __initterm_e               00403a04 f   MSVCRT:MSVCR90.dll
+ 0001:00002a0c       __SEH_prolog4              00403a0c f   MSVCRT:sehprolg4.obj
+ 0001:00002a51       __SEH_epilog4              00403a51 f   MSVCRT:sehprolg4.obj
+ 0001:00002a65       __except_handler4          00403a65 f   MSVCRT:chandler4gs.obj
+ 0001:00002a8a       __setdefaultprecision      00403a8a f   MSVCRT:fp8.obj
+ 0001:00002ab5       __setargv                  00403ab5 f   MSVCRT:dllargv.obj
+ 0001:00002ab5       __matherr                  00403ab5 f   MSVCRT:merr.obj
+ 0001:00002ab8       ___security_init_cookie    00403ab8 f   MSVCRT:gs_support.obj
+ 0001:00002b4e       __crt_debugger_hook        00403b4e f   MSVCRT:MSVCR90.dll
+ 0001:00002b54       ?terminate@@YAXXZ          00403b54 f   MSVCRT:MSVCR90.dll
+ 0001:00002b5a       ??1type_info@@UAE@XZ       00403b5a f   MSVCRT:MSVCR90.dll
+ 0001:00002b5a       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 00403b5a f   MSVCRT:MSVCR90.dll
+ 0001:00002b60       __unlock                   00403b60 f   MSVCRT:MSVCR90.dll
+ 0001:00002b66       ___dllonexit               00403b66 f   MSVCRT:MSVCR90.dll
+ 0001:00002b6c       __lock                     00403b6c f   MSVCRT:MSVCR90.dll
+ 0001:00002b72       __except_handler4_common   00403b72 f   MSVCRT:MSVCR90.dll
+ 0001:00002b78       __invoke_watson            00403b78 f   MSVCRT:MSVCR90.dll
+ 0001:00002b7e       __controlfp_s              00403b7e f   MSVCRT:MSVCR90.dll
+ 0001:00002b84       ___CxxFrameHandler3        00403b84 f   MSVCRT:MSVCR90.dll
+ 0001:00002b8a       __EH_prolog3               00403b8a f   MSVCRT:ehprolg3.obj
+ 0001:00002bbd       __EH_prolog3_catch         00403bbd f   MSVCRT:ehprolg3.obj
+ 0001:00002bf3       __EH_epilog3               00403bf3 f   MSVCRT:ehprolg3.obj
+ 0002:00000000       __imp__Sleep@4             00404000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__InterlockedCompareExchange@12 00404004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__TerminateProcess@8  00404008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetCurrentProcess@0 0040400c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__UnhandledExceptionFilter@4 00404010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__SetUnhandledExceptionFilter@4 00404014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__IsDebuggerPresent@0 00404018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__QueryPerformanceCounter@4 0040401c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__GetTickCount@0      00404020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__GetCurrentThreadId@0 00404024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__GetCurrentProcessId@0 00404028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__GetSystemTimeAsFileTime@4 0040402c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__InterlockedExchange@8 00404030     kernel32:KERNEL32.dll
+ 0002:00000034       \177KERNEL32_NULL_THUNK_DATA 00404034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z 00404038     msvcprt:MSVCP90.dll
+ 0002:0000003c       __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ 0040403c     msvcprt:MSVCP90.dll
+ 0002:00000040       __imp_?uncaught_exception@std@@YA_NXZ 00404040     msvcprt:MSVCP90.dll
+ 0002:00000044       __imp_?_Unlock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ 00404044     msvcprt:MSVCP90.dll
+ 0002:00000048       __imp_?_Lock@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEXXZ 00404048     msvcprt:MSVCP90.dll
+ 0002:0000004c       __imp_?open@?$basic_fstream@DU?$char_traits@D@std@@@std@@QAEXPBDI@Z 0040404c     msvcprt:MSVCP90.dll
+ 0002:00000050       __imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 00404050     msvcprt:MSVCP90.dll
+ 0002:00000054       __imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UAE@XZ 00404054     msvcprt:MSVCP90.dll
+ 0002:00000058       __imp_??1?$basic_fstream@DU?$char_traits@D@std@@@std@@UAE@XZ 00404058     msvcprt:MSVCP90.dll
+ 0002:0000005c       __imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 0040405c     msvcprt:MSVCP90.dll
+ 0002:00000060       __imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHPBDH@Z 00404060     msvcprt:MSVCP90.dll
+ 0002:00000064       __imp_??0?$basic_fstream@DU?$char_traits@D@std@@@std@@QAE@XZ 00404064     msvcprt:MSVCP90.dll
+ 0002:00000068       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z 00404068     msvcprt:MSVCP90.dll
+ 0002:0000006c       __imp_??0?$basic_ios@DU?$char_traits@D@std@@@std@@IAE@XZ 0040406c     msvcprt:MSVCP90.dll
+ 0002:00000070       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z 00404070     msvcprt:MSVCP90.dll
+ 0002:00000074       __imp_?read@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@PADH@Z 00404074     msvcprt:MSVCP90.dll
+ 0002:00000078       __imp_?seekg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAEAAV12@JH@Z 00404078     msvcprt:MSVCP90.dll
+ 0002:0000007c       __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@D@Z 0040407c     msvcprt:MSVCP90.dll
+ 0002:00000080       __imp_?tellg@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE?AV?$fpos@H@2@XZ 00404080     msvcprt:MSVCP90.dll
+ 0002:00000084       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z 00404084     msvcprt:MSVCP90.dll
+ 0002:00000088       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z 00404088     msvcprt:MSVCP90.dll
+ 0002:0000008c       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@G@Z 0040408c     msvcprt:MSVCP90.dll
+ 0002:00000090       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAVios_base@1@AAV21@@Z@Z 00404090     msvcprt:MSVCP90.dll
+ 0002:00000094       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@D@Z 00404094     msvcprt:MSVCP90.dll
+ 0002:00000098       __imp_??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 00404098     msvcprt:MSVCP90.dll
+ 0002:0000009c       __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z 0040409c     msvcprt:MSVCP90.dll
+ 0002:000000a0       __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ 004040a0     msvcprt:MSVCP90.dll
+ 0002:000000a4       __imp_?endl@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@1@AAV21@@Z 004040a4     msvcprt:MSVCP90.dll
+ 0002:000000a8       __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 004040a8     msvcprt:MSVCP90.dll
+ 0002:000000ac       __imp_??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z 004040ac     msvcprt:MSVCP90.dll
+ 0002:000000b0       __imp_??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAADI@Z 004040b0     msvcprt:MSVCP90.dll
+ 0002:000000b4       \177MSVCP90_NULL_THUNK_DATA 004040b4     msvcprt:MSVCP90.dll
+ 0002:000000b8       __imp___initterm           004040b8     MSVCRT:MSVCR90.dll
+ 0002:000000bc       __imp___initterm_e         004040bc     MSVCRT:MSVCR90.dll
+ 0002:000000c0       __imp___configthreadlocale 004040c0     MSVCRT:MSVCR90.dll
+ 0002:000000c4       __imp____setusermatherr    004040c4     MSVCRT:MSVCR90.dll
+ 0002:000000c8       __imp___adjust_fdiv        004040c8     MSVCRT:MSVCR90.dll
+ 0002:000000cc       __imp____p__commode        004040cc     MSVCRT:MSVCR90.dll
+ 0002:000000d0       __imp____p__fmode          004040d0     MSVCRT:MSVCR90.dll
+ 0002:000000d4       __imp___encode_pointer     004040d4     MSVCRT:MSVCR90.dll
+ 0002:000000d8       __imp____set_app_type      004040d8     MSVCRT:MSVCR90.dll
+ 0002:000000dc       __imp___crt_debugger_hook  004040dc     MSVCRT:MSVCR90.dll
+ 0002:000000e0       __imp_?terminate@@YAXXZ    004040e0     MSVCRT:MSVCR90.dll
+ 0002:000000e4       __imp_?_type_info_dtor_internal_method@type_info@@QAEXXZ 004040e4     MSVCRT:MSVCR90.dll
+ 0002:000000e8       __imp___unlock             004040e8     MSVCRT:MSVCR90.dll
+ 0002:000000ec       __imp____dllonexit         004040ec     MSVCRT:MSVCR90.dll
+ 0002:000000f0       __imp___lock               004040f0     MSVCRT:MSVCR90.dll
+ 0002:000000f4       __imp___onexit             004040f4     MSVCRT:MSVCR90.dll
+ 0002:000000f8       __imp___decode_pointer     004040f8     MSVCRT:MSVCR90.dll
+ 0002:000000fc       __imp___except_handler4_common 004040fc     MSVCRT:MSVCR90.dll
+ 0002:00000100       __imp___invoke_watson      00404100     MSVCRT:MSVCR90.dll
+ 0002:00000104       __imp___controlfp_s        00404104     MSVCRT:MSVCR90.dll
+ 0002:00000108       __imp____initenv           00404108     MSVCRT:MSVCR90.dll
+ 0002:0000010c       __imp___XcptFilter         0040410c     MSVCRT:MSVCR90.dll
+ 0002:00000110       __imp___exit               00404110     MSVCRT:MSVCR90.dll
+ 0002:00000114       __imp___cexit              00404114     MSVCRT:MSVCR90.dll
+ 0002:00000118       __imp____getmainargs       00404118     MSVCRT:MSVCR90.dll
+ 0002:0000011c       __imp___amsg_exit          0040411c     MSVCRT:MSVCR90.dll
+ 0002:00000120       __imp__qsort               00404120     MSVCRT:MSVCR90.dll
+ 0002:00000124       __imp___lfind              00404124     MSVCRT:MSVCR90.dll
+ 0002:00000128       __imp__printf              00404128     MSVCRT:MSVCR90.dll
+ 0002:0000012c       __imp__perror              0040412c     MSVCRT:MSVCR90.dll
+ 0002:00000130       __imp__exit                00404130     MSVCRT:MSVCR90.dll
+ 0002:00000134       __imp__sscanf              00404134     MSVCRT:MSVCR90.dll
+ 0002:00000138       __imp_??2@YAPAXI@Z         00404138     MSVCRT:MSVCR90.dll
+ 0002:0000013c       __imp_??3@YAXPAX@Z         0040413c     MSVCRT:MSVCR90.dll
+ 0002:00000140       __imp____CxxFrameHandler3  00404140     MSVCRT:MSVCR90.dll
+ 0002:00000144       \177MSVCR90_NULL_THUNK_DATA 00404144     MSVCRT:MSVCR90.dll
+ 0002:00000148       ___xc_a                    00404148     MSVCRT:cinitexe.obj
+ 0002:00000150       ___xc_z                    00404150     MSVCRT:cinitexe.obj
+ 0002:00000154       ___xi_a                    00404154     MSVCRT:cinitexe.obj
+ 0002:00000160       ___xi_z                    00404160     MSVCRT:cinitexe.obj
+ 0002:000004c0       ??_C@_0P@GHFPNOJB@bad?5allocation?$AA@ 004044c0     msvcprt:newaop_s.obj
+ 0002:000004d4       ??_7type_info@@6B@         004044d4     MSVCRT:ti_inst.obj
+ 0002:00000df4       ??_7FileOp@@6B@            00404df4     Option.obj
+ 0002:00000df8       ??_8FileOp@@7B?$basic_istream@DU?$char_traits@D@std@@@std@@@ 00404df8     Option.obj
+ 0002:00000e00       ??_8FileOp@@7B?$basic_ostream@DU?$char_traits@D@std@@@std@@@ 00404e00     Option.obj
+ 0002:00000e08       ??_R4type_info@@6B@        00404e08     MSVCRT:ti_inst.obj
+ 0002:00000e1c       ??_R3type_info@@8          00404e1c     MSVCRT:ti_inst.obj
+ 0002:00000e2c       ??_R2type_info@@8          00404e2c     MSVCRT:ti_inst.obj
+ 0002:00000e34       ??_R1A@?0A@EA@type_info@@8 00404e34     MSVCRT:ti_inst.obj
+ 0002:00000e50       ??_R4FileOp@@6B@           00404e50     Option.obj
+ 0002:00000e64       ??_R3FileOp@@8             00404e64     Option.obj
+ 0002:00000e74       ??_R2FileOp@@8             00404e74     Option.obj
+ 0002:00000ea4       ??_R1A@?0A@EA@?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ea4     Option.obj
+ 0002:00000ec0       ??_R3?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ec0     Option.obj
+ 0002:00000ed0       ??_R2?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ed0     Option.obj
+ 0002:00000efc       ??_R1A@?0A@EA@?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404efc     Option.obj
+ 0002:00000f18       ??_R3?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404f18     Option.obj
+ 0002:00000f28       ??_R2?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404f28     Option.obj
+ 0002:00000f50       ??_R17?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f50     Option.obj
+ 0002:00000f6c       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f6c     Option.obj
+ 0002:00000f7c       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f7c     Option.obj
+ 0002:00000f90       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f90     Option.obj
+ 0002:00000fac       ??_R1A@?0A@EA@?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fac     Option.obj
+ 0002:00000fc8       ??_R3?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fc8     Option.obj
+ 0002:00000fd8       ??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fd8     Option.obj
+ 0002:00000fec       ??_R13A@3EA@?$_Iosb@H@std@@8 00404fec     Option.obj
+ 0002:00001008       ??_R1A@A@3EA@ios_base@std@@8 00405008     Option.obj
+ 0002:00001024       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405024     Option.obj
+ 0002:00001040       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405040     Option.obj
+ 0002:00001050       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405050     Option.obj
+ 0002:00001060       ??_R1A@?0A@EA@ios_base@std@@8 00405060     Option.obj
+ 0002:0000107c       ??_R3ios_base@std@@8       0040507c     Option.obj
+ 0002:0000108c       ??_R2ios_base@std@@8       0040508c     Option.obj
+ 0002:00001098       ??_R13?0A@EA@?$_Iosb@H@std@@8 00405098     Option.obj
+ 0002:000010b4       ??_R3?$_Iosb@H@std@@8      004050b4     Option.obj
+ 0002:000010c4       ??_R2?$_Iosb@H@std@@8      004050c4     Option.obj
+ 0002:000010cc       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 004050cc     Option.obj
+ 0002:000010e8       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 004050e8     Option.obj
+ 0002:00001104       ??_R1A@?0A@EA@FileOp@@8    00405104     Option.obj
+ 0002:00001120       ___rtc_iaa                 00405120     MSVCRT:_initsect_.obj
+ 0002:00001124       ___rtc_izz                 00405124     MSVCRT:_initsect_.obj
+ 0002:00001128       ___rtc_taa                 00405128     MSVCRT:_initsect_.obj
+ 0002:0000112c       ___rtc_tzz                 0040512c     MSVCRT:_initsect_.obj
+ 0002:0000134c       __IMPORT_DESCRIPTOR_MSVCP90 0040534c     msvcprt:MSVCP90.dll
+ 0002:00001360       __IMPORT_DESCRIPTOR_MSVCR90 00405360     MSVCRT:MSVCR90.dll
+ 0002:00001374       __IMPORT_DESCRIPTOR_KERNEL32 00405374     kernel32:KERNEL32.dll
+ 0002:00001388       __NULL_IMPORT_DESCRIPTOR   00405388     msvcprt:MSVCP90.dll
+ 0003:00000004       ??_R0?AVtype_info@@@8      00407004     MSVCRT:ti_inst.obj
+ 0003:0000001c       ___security_cookie         0040701c     MSVCRT:gs_cookie.obj
+ 0003:00000020       ___security_cookie_complement 00407020     MSVCRT:gs_cookie.obj
+ 0003:00000024       ___native_dllmain_reason   00407024     MSVCRT:natstart.obj
+ 0003:00000028       ___native_vcclrit_reason   00407028     MSVCRT:natstart.obj
+ 0003:0000002c       ___globallocalestatus      0040702c     MSVCRT:xthdloc.obj
+ 0003:00000030       ___defaultmatherr          00407030     MSVCRT:merr.obj
+ 0003:00000034       ??_R0?AV?$basic_ostream@DU?$char_traits@D@std@@@std@@@8 00407034     Option.obj
+ 0003:00000070       ??_R0?AV?$_Iosb@H@std@@@8  00407070     Option.obj
+ 0003:0000008c       ??_R0?AVios_base@std@@@8   0040708c     Option.obj
+ 0003:000000a8       ??_R0?AV?$basic_ios@DU?$char_traits@D@std@@@std@@@8 004070a8     Option.obj
+ 0003:000000e0       ??_R0?AV?$basic_istream@DU?$char_traits@D@std@@@std@@@8 004070e0     Option.obj
+ 0003:0000011c       ??_R0?AV?$basic_iostream@DU?$char_traits@D@std@@@std@@@8 0040711c     Option.obj
+ 0003:00000158       ??_R0?AV?$basic_fstream@DU?$char_traits@D@std@@@std@@@8 00407158     Option.obj
+ 0003:00000194       ??_R0?AVFileOp@@@8         00407194     Option.obj
+ 0003:000004f4       __forceCRTManifestRTM      004074f4     MSVCRT:crtmanifestrtm.obj
+ 0003:000004f8       __dowildcard               004074f8     MSVCRT:wildcard.obj
+ 0003:000004fc       __newmode                  004074fc     MSVCRT:_newmode.obj
+ 0003:00000500       __commode                  00407500     MSVCRT:xncommod.obj
+ 0003:00000504       __fmode                    00407504     MSVCRT:xtxtmode.obj
+ 0003:00000508       ___@@_PchSym_@00@UkilqvxgUhnuCnnoUhnuCnnoUivovzhvUhgwzucOlyq@ 00407508     stdafx.obj
+ 0003:0000050c       __adjust_fdiv              0040750c     <common>
+ 0003:00000510       ___native_startup_state    00407510     <common>
+ 0003:00000514       ___native_startup_lock     00407514     <common>
+ 0003:00000518       ___onexitend               00407518     <common>
+ 0003:0000051c       ___onexitbegin             0040751c     <common>
+ 0003:00000520       ___dyn_tls_init_callback   00407520     <common>
 
- entry point at        0001:00002e2c
+ entry point at        0001:00002578
 
  Static symbols
 
- 0001:00000793       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 00401793 f i  CIL library: CIL module
- 0001:000029e6       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z$0 004039e6 f i  CIL library: CIL module
- 0001:00002b8a       _pre_cpp_init              00403b8a f   MSVCRT:crtexe.obj
- 0001:00002bd5       ___tmainCRTStartup         00403bd5 f   MSVCRT:crtexe.obj
- 0001:00002d4b       _pre_c_init                00403d4b f   MSVCRT:crtexe.obj
- 0001:00003450       __unwindfunclet$??_DFileOp@@QAEXXZ$0 00404450 f    CIL library: CIL module
- 0001:0000345c       __ehhandler$??_DFileOp@@QAEXXZ 0040445c f    CIL library: CIL module
- 0001:00003480       __unwindfunclet$??0FileOp@@QAE@XZ$0 00404480 f    CIL library: CIL module
- 0001:0000349d       __unwindfunclet$??0FileOp@@QAE@XZ$1 0040449d f    CIL library: CIL module
- 0001:000034a9       __ehhandler$??0FileOp@@QAE@XZ 004044a9 f    CIL library: CIL module
- 0001:000034d0       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 004044d0 f    CIL library: CIL module
- 0001:000034d0       __unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0 004044d0 f    CIL library: CIL module
- 0001:000034d8       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 004044d8 f    CIL library: CIL module
- 0001:000034d8       __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004044d8 f    CIL library: CIL module
- 0001:00003500       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00404500 f    CIL library: CIL module
- 0001:0000350a       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$3 0040450a f    CIL library: CIL module
- 0001:00003512       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00404512 f    CIL library: CIL module
- 0001:00003530       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$0 00404530 f    CIL library: CIL module
- 0001:0000353b       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$1 0040453b f    CIL library: CIL module
- 0001:00003546       __ehhandler$??0OPSW@@QAE@HQAPAD@Z 00404546 f    CIL library: CIL module
- 0001:00003570       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z$2 00404570 f    CIL library: CIL module
- 0001:0000357a       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z$3 0040457a f    CIL library: CIL module
- 0001:00003582       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@D@Z 00404582 f    CIL library: CIL module
- 0001:000035a0       __unwindfunclet$??0unMMLcompiler@@QAE@PAVOPSW@@@Z$0 004045a0 f    CIL library: CIL module
- 0001:000035ab       __ehhandler$??0unMMLcompiler@@QAE@PAVOPSW@@@Z 004045ab f    CIL library: CIL module
- 0001:000035d0       __unwindfunclet$_main$0    004045d0 f    CIL library: CIL module
- 0001:000035db       __unwindfunclet$_main$1    004045db f    CIL library: CIL module
- 0001:000035e6       __ehhandler$_main          004045e6 f    CIL library: CIL module
+ 0001:000005b4       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 004015b4 f i  CIL library: CIL module
+ 0001:000022d6       _pre_cpp_init              004032d6 f   MSVCRT:crtexe.obj
+ 0001:00002321       ___tmainCRTStartup         00403321 f   MSVCRT:crtexe.obj
+ 0001:00002497       _pre_c_init                00403497 f   MSVCRT:crtexe.obj
+ 0001:00002c07       __unwindfunclet$??_GFileOp@@UAEPAXI@Z$0 00403c07 f    CIL library: CIL module
+ 0001:00002c13       __ehhandler$??_GFileOp@@UAEPAXI@Z 00403c13 f    CIL library: CIL module
+ 0001:00002c2e       __unwindfunclet$??0FileOp@@QAE@XZ$0 00403c2e f    CIL library: CIL module
+ 0001:00002c4b       __unwindfunclet$??0FileOp@@QAE@XZ$1 00403c4b f    CIL library: CIL module
+ 0001:00002c57       __ehhandler$??0FileOp@@QAE@XZ 00403c57 f    CIL library: CIL module
+ 0001:00002c72       __unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0 00403c72 f    CIL library: CIL module
+ 0001:00002c72       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00403c72 f    CIL library: CIL module
+ 0001:00002c7a       __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00403c7a f    CIL library: CIL module
+ 0001:00002c7a       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00403c7a f    CIL library: CIL module
+ 0001:00002c95       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00403c95 f    CIL library: CIL module
+ 0001:00002c9f       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00403c9f f    CIL library: CIL module
+ 0001:00002cba       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$0 00403cba f    CIL library: CIL module
+ 0001:00002cc4       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$1 00403cc4 f    CIL library: CIL module
+ 0001:00002cce       __ehhandler$??0OPSW@@QAE@HQAPAD@Z 00403cce f    CIL library: CIL module
+ 0001:00002ce9       __unwindfunclet$??0unMMLcompiler@@QAE@PAVOPSW@@@Z$0 00403ce9 f    CIL library: CIL module
+ 0001:00002cf4       __ehhandler$??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00403cf4 f    CIL library: CIL module
+ 0001:00002d0f       __unwindfunclet$_main$0    00403d0f f    CIL library: CIL module
+ 0001:00002d19       __unwindfunclet$_main$1    00403d19 f    CIL library: CIL module
+ 0001:00002d23       __ehhandler$_main          00403d23 f    CIL library: CIL module

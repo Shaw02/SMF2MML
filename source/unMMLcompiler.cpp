@@ -178,18 +178,18 @@ void unMMLcompiler::EncodeVariable(unsigned	__int32	var){
 	//----------------------------------
 	//■可変長エンコード
 	do{
+		count++;
 		cData[count]=var&0x7F;
 		if((var>>=7)==0){
 			break;
 		}
 		cData[count]|=0x80;
-		count++;
 	} while((count<4));
 
 	//■可変長出力
 	*MML << hex;
 	do{
-		*MML << cData[count];
+		*MML << "$" << (int)cData[count];
 		count--;
 		if(count>0){
 			MML->put(',');
@@ -1096,12 +1096,13 @@ void unMMLcompiler::DecodeMetaEvent(){
 			}
 			break;
 		//--------------
-		//シーケンサ固有のメタイベント（未対応）
+		//シーケンサ固有のメタイベント
 		case(0x7F) :
-			*MML << "/*　DirectSMF($FF,$7F,";
+			*MML << "DirectSMF($FF,$7F,";
 			EncodeVariable(SMF_Event.iSize);
+			if(SMF_Event.iSize>0){MML->put(',');};
 			OutputHex();
-			*MML << "); */\n	";
+			*MML << ");\n	";
 			break;
 		//--------------
 		//
@@ -1166,7 +1167,7 @@ void unMMLcompiler::Decode1Command(){
 			//Channel 1～
 			if((iChannel)>0){
 				if(SMF_Header.format==0){
-					*MML << strTrack[OptionSW->cJpn] << iChannel;	//format 0だったら、トラックも吐く
+					*MML << strTrack[OptionSW->cJpn] << "(" << iChannel << ");	";	//format 0だったら、トラックも吐く
 				};
 				*MML << strChannel[OptionSW->cJpn][0] << iChannel << strChannel[OptionSW->cJpn][1];
 			};
