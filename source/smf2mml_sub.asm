@@ -126,7 +126,7 @@ endian_b2l_D	endp
 ;===============================================================|
 .const
 print_help_mes	db	"Sakura Music Macro Language un-compiler for Standard MIDI File",0dh,0ah
-		db	"Copyright (C) S.W. (A.watanabe)",0dh,0ah
+		db	"Copyright (C) S.W. (A.Watanabe) 2009-2010",0dh,0ah
 		db	0ah,0dh
 		db	"smf2mml [ /options ] [file(.mid)]",0dh,0ah
 		db	0ah,0dh

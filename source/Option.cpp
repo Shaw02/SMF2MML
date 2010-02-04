@@ -19,7 +19,8 @@ OPSW::OPSW(int argc, _TCHAR* argv[]):
 	iBar(1),		// | 出力
 	iCR(4),			//改行の小節数
 	iMaskFlag(0),	//マスクは、デフォルト無し
-	cJpn(0)			//MML
+	cJpn(0),		//MML
+	iAuftakt(0)		//アウフタクト
 	{
 
 	//----------------------------------
@@ -53,6 +54,15 @@ OPSW::OPSW(int argc, _TCHAR* argv[]):
 				case 'H' :
 				case '?' :
 					fHelp=1;
+					break;
+				//--------
+				//改行
+				case 'A' :
+					iResult=sscanf(argv[iCount],"/A%d",&iAuftakt);
+					if((iResult==NULL)||(iResult==EOF)){
+						opError("/A");
+						break;
+					};
 					break;
 				//--------
 				//小節スイッチ

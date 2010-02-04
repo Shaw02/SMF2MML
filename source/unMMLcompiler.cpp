@@ -11,32 +11,6 @@ extern	void not_smf(const char *stMsg);
 /****************************************************************/
 #define	dwMTrk	0x6B72544D		//'MTrk'を16進数にしてみた。
 
-//----------------------------------
-//■Gloval定数
-	const	char*	const	strTrack[2]		={	"TR","トラック"};
-	const	char*	const	strChannel[2][2]={	"CH("		,	");	q100 h-1\n	",
-												"チャンネル(",	");	ゲート100	h-1\n	"};
-	const	char*	const	strTime[2]		={	"\nTime(1:1:0);\n	","\n時間（１：１：０）;\n	"};
-
-
-	const	char*	const	strRest[2]	=	{	"r",	"ん"};	
-	const	char*	const	strNote[2][7]=	{	"c",	"d",	"e",	"f",	"g",	"a",	"b",
-																"ド",	"レ",	"ミ",	"ファ",	"ソ",	"ラ",	"シ"};
-	const	char*	const	strSharp[2]	=	{	"+",	"＃"};
-	const	char*	const	strFlat[2]	=	{	"-",	"♭"};
-	const	char*	const	strVelo[2]	=	{	"v",	"音量"};
-	const	char*	const	strOctave[2][6]	={	"o",	"<<",	"<",	"",	">",	">>",
-												"音階",	"↓↓",	"↓",	"",	"↑",	"↑↑"};
-
-	const	char			cSharp[6]				={11,4,9,2,7,0};	//調合
-	const	char			cFlat[6]				={5,0,7,2,9,4};		//調合
-
-	const	char*	const	strMetaText[2]			={"MetaText=",		"コメント"};
-	const	char*	const	strMetaCopyright[2]		={"Copyright=",		"作者"};
-	const	char*	const	strMetaTrackName[2]		={"TrackName=",		"曲名"};
-	const	char*	const	strMetaTempo[2]			={"Tempo",			"テンポ"};
-	const	char*	const	strMetaTimeSignature[2]	={"TimeSignature",	"拍子"};
-
 
 //###############################################################
 //#					汎用サブルーチン							#
@@ -91,8 +65,14 @@ void unMMLcompiler::initCH(){
 	iTicks=0;
 	iTotalTicks=0;
 	iTotalTicksChk=0;
-	iTicksBar=0;
-	iTicksCR=0;
+	if(OptionSW->iAuftakt == 0){
+		iTicksBar	= 0;
+		iTicksCR	= 0;
+	} else {
+		iTicksBar	= nowBeatTime - OptionSW->iAuftakt;
+		iTicksCR	= (nowBeatTime*OptionSW->iCR) - OptionSW->iAuftakt;
+	}
+
 	nowBeatTime=SMF_Meta.nowTimeTicks();
 
 //	iLength=4;
@@ -320,22 +300,15 @@ void unMMLcompiler::Ticks2LengthEx(int iTicksL){
 //	●返値
 //			無し
 //==============================================================
-	//----------------------------------
-	//■Gloval定数
-
-	const	char*	const	strTai[2]	=	{"^","ー"};
-
 void unMMLcompiler::OutputTicks(/*unsigned	__int32		iTicksL*/){
 
 	//----------------------------------
 	//■Local 変数
-				char	flagStart;
-				int		iLength;			//音長変換用
-				__int64	iLengthBT;			//音長変換用（拍子が変わるまで）
+					char			flagStart=1;
+					int				iLength;			//音長変換用
+					__int64			iLengthBT;			//音長変換用（拍子が変わるまで）
 
-	//----------------------------------
-	//■初期化
-	flagStart=1;		//呼ばれた最初であるかを示すフラグ
+	static	const	char*	const	strTai[2]	=	{"^","ー"};
 
 	//----------------------------------
 	//■音長の出力
@@ -469,13 +442,27 @@ void unMMLcompiler::OutputNoteEx(){
 
 	//----------------------------------
 	//■Local 変数
-			char	caOct;			//オクターブ計算用
-			char	cCmpOctave;		//オクターブ差
-			char	caNote;			//ノート計算用
-			char	cN;				//汎用 (Note)
-			char	cS=0;			//汎用 (スケール)
-			char	cAccidental=0;	//臨時記号
-			char	cScale[7]		={0,2,4,5,7,9,11};	//ダイアトニック（これは、調によって変える）
+					char			caOct;			//オクターブ計算用
+					char			cCmpOctave;		//オクターブ差
+					char			caNote;			//ノート計算用
+					char			cN;				//汎用 (Note)
+					char			cS=0;			//汎用 (スケール)
+					char			cAccidental=0;	//臨時記号
+					char			cScale[7]		={0,2,4,5,7,9,11};	//ダイアトニック（これは、調によって変える）
+
+	static	const	char			cSharp[6]		={11,4,9,2,7,0};	//調合
+	static	const	char			cFlat[6]		={5,0,7,2,9,4};		//調合
+
+	static	const	char*	const	strTai[2]	=	{	"^","ー"};
+	static	const	char*	const	strRest[2]	=	{	"r",	"ん"};
+	static	const	char*	const	strNote[2][7]=	{	"c",	"d",	"e",	"f",	"g",	"a",	"b",
+																"ド",	"レ",	"ミ",	"ファ",	"ソ",	"ラ",	"シ"};
+	static	const	char*	const	strSharp[2]	=	{	"+",	"＃"};
+	static	const	char*	const	strFlat[2]	=	{	"-",	"♭"};
+	static	const	char*	const	strVelo[2]	=	{	"v",	"音量"};
+	static	const	char*	const	strOctave[2][6]	={	"o",	"<<",	"<",	"",	">",	">>",
+														"音階",	"↓↓",	"↓",	"",	"↑",	"↑↑"};
+
 
 	//----------------------------------
 	//■出力
@@ -644,8 +631,53 @@ void unMMLcompiler::DecodeNote(){
 //==============================================================
 void unMMLcompiler::DecodeControlChange(){
 
+/*
+	static const char *strCC[128] = {
+		"Bank Select",			//0
+		"Modlation",			//1
+		"Breath Controller",	//2	
+		"",						//3
+		"Foot Controller",		//4
+		"Prtamento Time",		//5
+		"Data Entry",			//6
+	};
+*/
+
+	const	long				fptStream	= SMF->tellg();		//ファイルポインタの保存
+	//ステータスバイト・データバイトを保存
+	const				char	cTempEoT	= SMF_Event.flagEoT;	//End of Trackのフラグ
+	const	unsigned	char	cTempStatus	= SMF_Event.cStatus;	//
+	const	unsigned	char	cTempData1	= SMF_Event.cData1;		//
+	const	unsigned	char	cTempData2	= SMF_Event.cData2;		//
+
+	const	unsigned	char	cChannel = cTempStatus & 0x0F;
+			unsigned	char	cData[3];
+
 	//コントロール別処理
 	switch(SMF_Event.cData1){
+		//--------------
+		//Bank Select
+		case(0):
+			cData[0] = SMF_Event.cData2;
+			if (SMF_Event.EventRead() == 0){
+			if (((SMF_Event.cStatus) == (CVM_CCM | cChannel)) && (SMF_Event.cData1 == 32)){
+			cData[1] = SMF_Event.cData2;
+			if (SMF_Event.EventRead() == 0){
+			if ((SMF_Event.cStatus) == (CVM_PCM | cChannel)){
+				*MML << "Voice(" << (int)(SMF_Event.cData1 +1) << "," << (int)cData[0] << "," << (int)cData[1] << "); ";
+				break;
+			}}}}
+			//--------------
+			//復帰
+			SMF_Event.flagEoT	= cTempEoT;		//End of Trackのフラグ
+			SMF_Event.cStatus	= cTempStatus;
+			SMF_Event.cData1	= cTempData1;
+			SMF_Event.cData2	= cTempData2;
+			//ポインタを戻す
+			SMF->StreamPointerMove(fptStream);
+			//最適化で default: に行くように！
+			*MML << "y" << (int)SMF_Event.cData1 << "," << (int)SMF_Event.cData2 << "; ";
+			break;
 		//--------------
 		//Modulation
 		case(1):
@@ -677,6 +709,11 @@ void unMMLcompiler::DecodeControlChange(){
 			*MML << "EP(" << (int)SMF_Event.cData2 << "); ";
 			break;
 		//--------------
+		//DataLSB
+		case(38):
+			*MML << "DataMSB(" << (int)SMF_Event.cData2 << "); ";
+			break;
+		//--------------
 		//ポルタメントスイッチ
 		case(65):
 			*MML << "PS(" << (int)SMF_Event.cData2 << "); ";
@@ -695,6 +732,65 @@ void unMMLcompiler::DecodeControlChange(){
 		//セレステ
 		case(94):
 			*MML << "VAR(" << (int)SMF_Event.cData2 << "); ";
+			break;
+		//--------------
+		//NRPN
+		case(99):
+			cData[0] = SMF_Event.cData2;	//cc:99
+			if (SMF_Event.EventRead() == 0){
+			if (((SMF_Event.cStatus) == (CVM_CCM | cChannel)) && (SMF_Event.cData1 == 98)){
+			cData[1] = SMF_Event.cData2;	//cc:98
+			if (SMF_Event.EventRead() == 0){
+			if (((SMF_Event.cStatus) == (CVM_CCM | cChannel)) && (SMF_Event.cData1 == 6)){
+				*MML << "NRPN(" << (int)cData[0] << "," << (int)cData[1] << "," << (int)SMF_Event.cData2 << "); ";
+				break;
+			}}}}
+			//--------------
+			//復帰
+			SMF_Event.flagEoT	= cTempEoT;		//End of Trackのフラグ
+			SMF_Event.cStatus	= cTempStatus;
+			SMF_Event.cData1	= cTempData1;
+			SMF_Event.cData2	= cTempData2;
+			//ポインタを戻す
+			SMF->StreamPointerMove(fptStream);
+			//最適化で default: に行くように！
+			*MML << "y" << (int)SMF_Event.cData1 << "," << (int)SMF_Event.cData2 << "; ";
+			break;
+		//--------------
+		//RPN
+		case(101):
+			cData[0] = SMF_Event.cData2;	//cc:101
+			if (SMF_Event.EventRead() == 0){
+			if (((SMF_Event.cStatus) == (CVM_CCM | cChannel)) && (SMF_Event.cData1 == 100)){
+			cData[1] = SMF_Event.cData2;	//cc:100
+			if (SMF_Event.EventRead() == 0){
+			if (((SMF_Event.cStatus) == (CVM_CCM | cChannel)) && (SMF_Event.cData1 == 6)){
+				switch((cData[0]<<7)+cData[1]){
+					case(0):
+						*MML << "BR(" << (int)SMF_Event.cData2 << "); ";
+						break;
+					case(1):
+						*MML << "FineTune(" << (int)SMF_Event.cData2 << "); ";
+						break;
+					case(2):
+						*MML << "CoarseTune(" << (int)SMF_Event.cData2 << "); ";
+						break;
+					default:
+						*MML << "RPN(" << (int)cData[0] << "," << (int)cData[1] << "," << (int)SMF_Event.cData2 << "); ";
+						break;
+				}
+				break;
+			}}}}
+			//--------------
+			//復帰
+			SMF_Event.flagEoT	= cTempEoT;		//End of Trackのフラグ
+			SMF_Event.cStatus	= cTempStatus;
+			SMF_Event.cData1	= cTempData1;
+			SMF_Event.cData2	= cTempData2;
+			//ポインタを戻す
+			SMF->StreamPointerMove(fptStream);
+			//最適化で default: に行くように！
+			*MML << "y" << (int)SMF_Event.cData1 << "," << (int)SMF_Event.cData2 << "; ";
 			break;
 		//--------------
 		//その他
@@ -795,20 +891,26 @@ void unMMLcompiler::Header(){
 	//----------------------------------
 	//■Local 変数
 
-	*MML	<< "//--------------------------------------" << endl
-			<< "//		SMF2MML" << endl
-			<< "//--------------------------------------" << endl
-			<< "//MThd Infomation :" << endl
-			<< "//	Size = " << SMF_Header.size << endl
-			<< "//	Format = " << (unsigned int)SMF_Header.format << endl
-			<< "//	Track = " << (unsigned int)SMF_Header.track << endl
-			<< "//" << endl
-			<< "System.ControllerShift = 0;" << endl
-			<< "System.TimeBase = "<< SMF_Header.timebase << ";" << endl
-			<< endl << endl << endl;
+	*MML	<<	"//--------------------------------------\n"
+				"//		SMF2MML\n"
+				"//--------------------------------------\n"
+				"//MThd Infomation :\n"
+				"//	Size = " << SMF_Header.size	<< "\n"
+				"//	Format = " << (unsigned int)SMF_Header.format	<< "\n"
+				"//	Track = " << (unsigned int)SMF_Header.track		<< "\n"
+				"//\n"
+				"System.ControllerShift = 0;\n"
+				"System.TimeBase = " << SMF_Header.timebase << ";\n"
+				"\n"
+				"Include(stdmsg.h);\n"
+//				"Include(include.h);\n"
+				"\n\n"	<<	endl;
 
 	//まずは、4/4拍って事にしておく。
 	SMF_Meta.addRhythm(0,4,2,SMF_Header.timebase);
+	if(OptionSW->iAuftakt > 0){
+		SMF_Meta.addRhythm(OptionSW->iAuftakt,4,2,SMF_Header.timebase);
+	}
 
 	//メタイベントのサーチ
 	MetaSearch();
@@ -840,17 +942,14 @@ void unMMLcompiler::Header(){
 //	●返値
 //			無し
 //==============================================================
-	//----------------------------------
-	//■Gloval定数
-	const	char*	const	strVoice[2]={"Voice","音色"};
-
-
 void unMMLcompiler::DecodeChannelVoiceMessage(){
 
 	//----------------------------------
 	//■Local 変数
-	unsigned	int			iChannel;		//チャンネル情報
-	unsigned	char		cCommand;		//コマンド種類
+		unsigned	int				iChannel;		//チャンネル情報
+		unsigned	char			cCommand;		//コマンド種類
+
+	static	const	char*	const	strVoice[2]={"Voice","音色"};
 
 	//--------------
 	//チャンネルとコマンドに分解する
@@ -863,7 +962,6 @@ void unMMLcompiler::DecodeChannelVoiceMessage(){
 		//--------------
 		//Note Off Message
 		case(0x08) :
-//			OptionSW->MML.writePrintf("NoteOff(%d,%d); ",unMML->SMF_Event.cData1,unMML->SMF_Event.cData2);
 			if(SMF_Event.cData1==cNote){
 				cNote=0xFF;			//Note Off (休符)
 			};
@@ -871,12 +969,13 @@ void unMMLcompiler::DecodeChannelVoiceMessage(){
 		//--------------
 		//Note On Message
 		case(0x09) :
-//			OptionSW->MML.writePrintf("NoteOn(%d,%d); ",unMML->SMF_Event.cData1,unMML->SMF_Event.cData2);
-			if((SMF_Event.cData1==cNote)&&(SMF_Event.cData2==0)){
-				cNote=0xFF;			//Note Off (休符)
+			if(SMF_Event.cData2!=0){
+				DecodeNote();			//Note On
 			} else {
-				DecodeNote();		//Note On
-			};
+				if(SMF_Event.cData1==cNote){
+					cNote=0xFF;			//Note Off (休符)
+				}
+			}
 			break;
 		//--------------
 		//Polyhonic Key Pressure 
@@ -959,6 +1058,13 @@ void unMMLcompiler::DecodeMetaEvent(){
 	unsigned	char	cData[4];	//データ
 	unsigned	int		iData;		//汎用
 
+	static	const	char	*strMetaText[2]				={"MetaText=",		"コメント"};
+	static	const	char	*strMetaCopyright[2]		={"Copyright=",		"作者"};
+	static	const	char	*strMetaTrackName[2]		={"TrackName=",		"曲名"};
+	static	const	char	*strMetaTempo[2]			={"Tempo",			"テンポ"};
+	static	const	char	*strMetaTimeSignature[2]	={"TimeSignature",	"拍子"};
+
+	//----------------------------------
 	//イベント別処理
 	switch(SMF_Event.cData1){
 		//--------------
@@ -1132,6 +1238,12 @@ void unMMLcompiler::Decode1Command(){
 	unsigned	char		cChannel;		//チャンネル情報
 	unsigned	char		cCommand;		//コマンド種類
 
+	static	const	char*	const	strTime[2]		={	"\nTime(1:1:0);\n	","\n時間（１：１：０）;\n	"};
+	static	const	char*	const	strTrack[2]		={	"TR","トラック"};
+	static	const	char*	const	strChannel[2][2]={	"CH("		,	");	q100 h-1\n	",
+														"チャンネル(",	");	ゲート100	h-1\n	"};
+
+	//----------------------------------
 	//MIDIイベント読み込み
 	iDeltaTime = SMF_Event.EventRead();
 	iTicks+=iDeltaTime;				//現デルタタイムに加算
@@ -1239,6 +1351,8 @@ void unMMLcompiler::uncompile(){
 	//----------------------------------
 	//■Local 変数
 //	unMMLcompiler	unMML(OptionSW);	//逆MMLを処理するための構造体
+
+	static	const	char*	const	strTrack[2]		={	"TR","トラック"};
 
 	//----------------------------------
 	//■ヘッダー処理

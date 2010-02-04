@@ -1,12 +1,12 @@
  smf2mml
 
- Timestamp is 4a5315b0 (Tue Jul 07 18:30:24 2009)
+ Timestamp is 4b6ad7fd (Thu Feb 04 23:21:49 2010)
 
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
- 0001:00000000 00002c07H .text                   CODE
- 0001:00002c07 00000137H .text$x                 CODE
+ 0001:00000000 00002d17H .text                   CODE
+ 0001:00002d17 00000137H .text$x                 CODE
  0002:00000000 00000148H .idata$5                DATA
  0002:00000148 00000004H .CRT$XCA                DATA
  0002:0000014c 00000004H .CRT$XCAA               DATA
@@ -15,20 +15,20 @@
  0002:00000158 00000004H .CRT$XIAA               DATA
  0002:0000015c 00000004H .CRT$XIY                DATA
  0002:00000160 00000004H .CRT$XIZ                DATA
- 0002:00000164 00000ca4H .rdata                  DATA
- 0002:00000e08 00000318H .rdata$r                DATA
- 0002:00001120 00000004H .rtc$IAA                DATA
- 0002:00001124 00000004H .rtc$IZZ                DATA
- 0002:00001128 00000004H .rtc$TAA                DATA
- 0002:0000112c 00000004H .rtc$TZZ                DATA
- 0002:00001130 0000021cH .xdata$x                DATA
- 0002:0000134c 0000003cH .idata$2                DATA
- 0002:00001388 00000014H .idata$3                DATA
- 0002:0000139c 00000148H .idata$4                DATA
- 0002:000014e4 00000bdeH .idata$6                DATA
- 0002:000020c2 00000000H .edata                  DATA
- 0003:00000000 000001b0H .data                   DATA
- 0003:000001b0 00000374H .bss                    DATA
+ 0002:00000168 00000c19H .rdata                  DATA
+ 0002:00000d84 00000318H .rdata$r                DATA
+ 0002:0000109c 00000004H .rtc$IAA                DATA
+ 0002:000010a0 00000004H .rtc$IZZ                DATA
+ 0002:000010a4 00000004H .rtc$TAA                DATA
+ 0002:000010a8 00000004H .rtc$TZZ                DATA
+ 0002:000010b0 0000021cH .xdata$x                DATA
+ 0002:000012cc 0000003cH .idata$2                DATA
+ 0002:00001308 00000014H .idata$3                DATA
+ 0002:0000131c 00000148H .idata$4                DATA
+ 0002:00001464 00000bdeH .idata$6                DATA
+ 0002:00002042 00000000H .edata                  DATA
+ 0003:00000000 000001d8H .data                   DATA
+ 0003:000001d8 00000370H .bss                    DATA
 
   Address         Publics by Value              Rva+Base       Lib:Object
 
@@ -36,94 +36,94 @@
  0000:00000000       ___safe_se_handler_table   00000000     <absolute>
  0000:00000000       ___ImageBase               00400000     <linker-defined>
  0001:00000000       ??0OPSW@@QAE@HQAPAD@Z      00401000 f   Option.obj
- 0001:000003a9       ??0FileOp@@QAE@XZ          004013a9 f i Option.obj
- 0001:00000408       ??_EFileOp@@UAEPAXI@Z      00401408 f i  CIL library: CIL module
- 0001:00000408       ??_GFileOp@@UAEPAXI@Z      00401408 f i Option.obj
- 0001:00000459       ?opError@OPSW@@QAEXPBD@Z   00401459 f   Option.obj
- 0001:00000492       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00401492 f i Option.obj
- 0001:000005d7       ?fileopen@FileOp@@QAEXI@Z  004015d7 f i Option.obj
- 0001:00000623       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00401623 f i Option.obj
- 0001:00000681       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00401681 f i Option.obj
- 0001:00000699       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00401699 f i Option.obj
- 0001:000006e1       ?not_smf@@YAXPBD@Z         004016e1 f   smf2mml.obj
- 0001:0000070a       _main                      0040170a f   smf2mml.obj
- 0001:00000776       ??1SMF_MetaEvent@@QAE@XZ   00401776 f i smf2mml.obj
- 0001:00000780       ??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00401780 f i smf2mml.obj
- 0001:000007d5       ?DecodeVariable@SMF_event@@QAEIXZ 004017d5 f   smfEvent.obj
- 0001:000007fe       ?EventRead@SMF_event@@QAEIXZ 004017fe f   smfEvent.obj
- 0001:000008f4       ?Read@SMF_event@@QAEEXZ    004018f4 f i smfEvent.obj
- 0001:00000910       ?Compare@SMF_MetaEvent@@CAHPBX0@Z 00401910 f   smfMeta.obj
- 0001:00000929       ?addRhythm@SMF_MetaEvent@@QAEX_KEEG@Z 00401929 f   smfMeta.obj
- 0001:000009ac       ??0SMF_MThd@@QAE@PAVFileOp@@@Z 004019ac f   smfMThd.obj
- 0001:00000a50       ?initTR@unMMLcompiler@@AAEXXZ 00401a50 f   unMMLcompiler.obj
- 0001:00000aa7       ?initCH@unMMLcompiler@@AAEXXZ 00401aa7 f   unMMLcompiler.obj
- 0001:00000af8       ?OutputHex@unMMLcompiler@@AAEXXZ 00401af8 f   unMMLcompiler.obj
- 0001:00000b70       ?OutputStrings@unMMLcompiler@@AAEXXZ 00401b70 f   unMMLcompiler.obj
- 0001:00000bb4       ?EncodeVariable@unMMLcompiler@@AAEXI@Z 00401bb4 f   unMMLcompiler.obj
- 0001:00000c3a       ?OutputBarCr@unMMLcompiler@@AAEXXZ 00401c3a f   unMMLcompiler.obj
- 0001:00000d65       ?Ticks2LengthEx@unMMLcompiler@@AAEXH@Z 00401d65 f   unMMLcompiler.obj
- 0001:00000df3       ?OutputTicks@unMMLcompiler@@AAEXXZ 00401df3 f   unMMLcompiler.obj
- 0001:00000f29       ?OutputNoteEx@unMMLcompiler@@AAEXXZ 00401f29 f   unMMLcompiler.obj
- 0001:0000112c       ?DecodeNote@unMMLcompiler@@AAEXXZ 0040212c f   unMMLcompiler.obj
- 0001:00001288       ?DecodeControlChange@unMMLcompiler@@AAEXXZ 00402288 f   unMMLcompiler.obj
- 0001:00001466       ?MetaSearch@unMMLcompiler@@AAEXXZ 00402466 f   unMMLcompiler.obj
- 0001:0000155a       ?Header@unMMLcompiler@@AAEXXZ 0040255a f   unMMLcompiler.obj
- 0001:00001812       ?DecodeChannelVoiceMessage@unMMLcompiler@@AAEXXZ 00402812 f   unMMLcompiler.obj
- 0001:00001949       ?DecodeSystemExcusiveMessage@unMMLcompiler@@AAEXXZ 00402949 f   unMMLcompiler.obj
- 0001:00001989       ?DecodeSystemCommonMessage@unMMLcompiler@@AAEXXZ 00402989 f   unMMLcompiler.obj
- 0001:000019c9       ?DecodeMetaEvent@unMMLcompiler@@AAEXXZ 004029c9 f   unMMLcompiler.obj
- 0001:00001efe       ?Decode1Command@unMMLcompiler@@AAEXXZ 00402efe f   unMMLcompiler.obj
- 0001:00002097       ?uncompile@unMMLcompiler@@QAEXXZ 00403097 f   unMMLcompiler.obj
- 0001:000021d6       ?dec@std@@YAAAVios_base@1@AAV21@@Z 004031d6 f i unMMLcompiler.obj
- 0001:000021ed       ?hex@std@@YAAAVios_base@1@AAV21@@Z 004031ed f i unMMLcompiler.obj
- 0001:00002204       _endian_b2l_W              00403204 f   smf2mml_sub.obj
- 0001:00002218       _endian_b2l_D              00403218 f   smf2mml_sub.obj
- 0001:0000223d       _print_help                0040323d f   smf2mml_sub.obj
- 0001:00002257       ??_U@YAPAXI@Z              00403257 f   msvcprt:newaop_s.obj
- 0001:00002262       @__security_check_cookie@4 00403262 f   MSVCRT:secchk.obj
- 0001:00002272       ??2@YAPAXI@Z               00403272 f   MSVCRT:MSVCR90.dll
- 0001:00002278       ??3@YAXPAX@Z               00403278 f   MSVCRT:MSVCR90.dll
- 0001:0000227e       ??_Etype_info@@UAEPAXI@Z   0040327e f i MSVCRT:ti_inst.obj
- 0001:000022ca       _exit                      004032ca f   MSVCRT:MSVCR90.dll
- 0001:000022d0       _printf                    004032d0 f   MSVCRT:MSVCR90.dll
- 0001:00002578       _mainCRTStartup            00403578 f   MSVCRT:crtexe.obj
- 0001:00002582       ___report_gsfailure        00403582 f   MSVCRT:gs_report.obj
- 0001:00002688       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 00403688 f   MSVCRT:ehvecdtr.obj
- 0001:000026e6       ??_M@YGXPAXIHP6EX0@Z@Z     004036e6 f   MSVCRT:ehvecdtr.obj
- 0001:00002749       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 00403749 f   MSVCRT:unhandld.obj
- 0001:0000278b       ___CxxSetUnhandledExceptionFilter 0040378b f   MSVCRT:unhandld.obj
- 0001:0000279a       __amsg_exit                0040379a f   MSVCRT:MSVCR90.dll
- 0001:000027a0       __onexit                   004037a0 f   MSVCRT:atonexit.obj
- 0001:00002845       _atexit                    00403845 f   MSVCRT:atonexit.obj
- 0001:0000285c       __RTC_Initialize           0040385c f   MSVCRT:_initsect_.obj
- 0001:00002882       __RTC_Terminate            00403882 f   MSVCRT:_initsect_.obj
- 0001:000028a8       __XcptFilter               004038a8 f   MSVCRT:MSVCR90.dll
- 0001:000028b0       __ValidateImageBase        004038b0 f   MSVCRT:pesect.obj
- 0001:000028f0       __FindPESection            004038f0 f   MSVCRT:pesect.obj
- 0001:00002940       __IsNonwritableInCurrentImage 00403940 f   MSVCRT:pesect.obj
- 0001:000029fe       __initterm                 004039fe f   MSVCRT:MSVCR90.dll
- 0001:00002a04       __initterm_e               00403a04 f   MSVCRT:MSVCR90.dll
- 0001:00002a0c       __SEH_prolog4              00403a0c f   MSVCRT:sehprolg4.obj
- 0001:00002a51       __SEH_epilog4              00403a51 f   MSVCRT:sehprolg4.obj
- 0001:00002a65       __except_handler4          00403a65 f   MSVCRT:chandler4gs.obj
- 0001:00002a8a       __setdefaultprecision      00403a8a f   MSVCRT:fp8.obj
- 0001:00002ab5       __setargv                  00403ab5 f   MSVCRT:dllargv.obj
- 0001:00002ab5       __matherr                  00403ab5 f   MSVCRT:merr.obj
- 0001:00002ab8       ___security_init_cookie    00403ab8 f   MSVCRT:gs_support.obj
- 0001:00002b4e       __crt_debugger_hook        00403b4e f   MSVCRT:MSVCR90.dll
- 0001:00002b54       ?terminate@@YAXXZ          00403b54 f   MSVCRT:MSVCR90.dll
- 0001:00002b5a       ??1type_info@@UAE@XZ       00403b5a f   MSVCRT:MSVCR90.dll
- 0001:00002b5a       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 00403b5a f   MSVCRT:MSVCR90.dll
- 0001:00002b60       __unlock                   00403b60 f   MSVCRT:MSVCR90.dll
- 0001:00002b66       ___dllonexit               00403b66 f   MSVCRT:MSVCR90.dll
- 0001:00002b6c       __lock                     00403b6c f   MSVCRT:MSVCR90.dll
- 0001:00002b72       __except_handler4_common   00403b72 f   MSVCRT:MSVCR90.dll
- 0001:00002b78       __invoke_watson            00403b78 f   MSVCRT:MSVCR90.dll
- 0001:00002b7e       __controlfp_s              00403b7e f   MSVCRT:MSVCR90.dll
- 0001:00002b84       ___CxxFrameHandler3        00403b84 f   MSVCRT:MSVCR90.dll
- 0001:00002b8a       __EH_prolog3               00403b8a f   MSVCRT:ehprolg3.obj
- 0001:00002bbd       __EH_prolog3_catch         00403bbd f   MSVCRT:ehprolg3.obj
- 0001:00002bf3       __EH_epilog3               00403bf3 f   MSVCRT:ehprolg3.obj
+ 0001:000003d7       ??0FileOp@@QAE@XZ          004013d7 f i Option.obj
+ 0001:00000436       ??_EFileOp@@UAEPAXI@Z      00401436 f i  CIL library: CIL module
+ 0001:00000436       ??_GFileOp@@UAEPAXI@Z      00401436 f i Option.obj
+ 0001:00000487       ?opError@OPSW@@QAEXPBD@Z   00401487 f   Option.obj
+ 0001:000004c0       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 004014c0 f i Option.obj
+ 0001:00000605       ?fileopen@FileOp@@QAEXI@Z  00401605 f i Option.obj
+ 0001:00000651       ??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00401651 f i Option.obj
+ 0001:000006af       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004016af f i Option.obj
+ 0001:000006c7       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004016c7 f i Option.obj
+ 0001:0000070f       ?not_smf@@YAXPBD@Z         0040170f f   smf2mml.obj
+ 0001:00000738       _main                      00401738 f   smf2mml.obj
+ 0001:000007a4       ??1SMF_MetaEvent@@QAE@XZ   004017a4 f i smf2mml.obj
+ 0001:000007ae       ??0unMMLcompiler@@QAE@PAVOPSW@@@Z 004017ae f i smf2mml.obj
+ 0001:00000803       ?DecodeVariable@SMF_event@@QAEIXZ 00401803 f   smfEvent.obj
+ 0001:0000082c       ?EventRead@SMF_event@@QAEIXZ 0040182c f   smfEvent.obj
+ 0001:00000922       ?Read@SMF_event@@QAEEXZ    00401922 f i smfEvent.obj
+ 0001:0000093e       ?Compare@SMF_MetaEvent@@CAHPBX0@Z 0040193e f   smfMeta.obj
+ 0001:00000957       ?addRhythm@SMF_MetaEvent@@QAEX_KEEG@Z 00401957 f   smfMeta.obj
+ 0001:000009da       ??0SMF_MThd@@QAE@PAVFileOp@@@Z 004019da f   smfMThd.obj
+ 0001:00000a7e       ?initTR@unMMLcompiler@@AAEXXZ 00401a7e f   unMMLcompiler.obj
+ 0001:00000ad5       ?initCH@unMMLcompiler@@AAEXXZ 00401ad5 f   unMMLcompiler.obj
+ 0001:00000b46       ?OutputHex@unMMLcompiler@@AAEXXZ 00401b46 f   unMMLcompiler.obj
+ 0001:00000bbe       ?OutputStrings@unMMLcompiler@@AAEXXZ 00401bbe f   unMMLcompiler.obj
+ 0001:00000c02       ?EncodeVariable@unMMLcompiler@@AAEXI@Z 00401c02 f   unMMLcompiler.obj
+ 0001:00000c88       ?OutputBarCr@unMMLcompiler@@AAEXXZ 00401c88 f   unMMLcompiler.obj
+ 0001:00000dac       ?Ticks2LengthEx@unMMLcompiler@@AAEXH@Z 00401dac f   unMMLcompiler.obj
+ 0001:00000e3a       ?OutputTicks@unMMLcompiler@@AAEXXZ 00401e3a f   unMMLcompiler.obj
+ 0001:00000f70       ?OutputNoteEx@unMMLcompiler@@AAEXXZ 00401f70 f   unMMLcompiler.obj
+ 0001:00001173       ?DecodeNote@unMMLcompiler@@AAEXXZ 00402173 f   unMMLcompiler.obj
+ 0001:000012cf       ?DecodeControlChange@unMMLcompiler@@AAEXXZ 004022cf f   unMMLcompiler.obj
+ 0001:00001754       ?MetaSearch@unMMLcompiler@@AAEXXZ 00402754 f   unMMLcompiler.obj
+ 0001:00001848       ?Header@unMMLcompiler@@AAEXXZ 00402848 f   unMMLcompiler.obj
+ 0001:00001a1e       ?DecodeChannelVoiceMessage@unMMLcompiler@@AAEXXZ 00402a1e f   unMMLcompiler.obj
+ 0001:00001b4d       ?DecodeSystemExcusiveMessage@unMMLcompiler@@AAEXXZ 00402b4d f   unMMLcompiler.obj
+ 0001:00001b8d       ?DecodeSystemCommonMessage@unMMLcompiler@@AAEXXZ 00402b8d f   unMMLcompiler.obj
+ 0001:00001bd0       ?DecodeMetaEvent@unMMLcompiler@@AAEXXZ 00402bd0 f   unMMLcompiler.obj
+ 0001:00002008       ?Decode1Command@unMMLcompiler@@AAEXXZ 00403008 f   unMMLcompiler.obj
+ 0001:000021a1       ?uncompile@unMMLcompiler@@QAEXXZ 004031a1 f   unMMLcompiler.obj
+ 0001:000022e0       ?dec@std@@YAAAVios_base@1@AAV21@@Z 004032e0 f i unMMLcompiler.obj
+ 0001:000022f7       ?hex@std@@YAAAVios_base@1@AAV21@@Z 004032f7 f i unMMLcompiler.obj
+ 0001:00002310       _endian_b2l_W              00403310 f   smf2mml_sub.obj
+ 0001:00002324       _endian_b2l_D              00403324 f   smf2mml_sub.obj
+ 0001:00002349       _print_help                00403349 f   smf2mml_sub.obj
+ 0001:00002363       ??_U@YAPAXI@Z              00403363 f   msvcprt:newaop_s.obj
+ 0001:0000236e       @__security_check_cookie@4 0040336e f   MSVCRT:secchk.obj
+ 0001:0000237e       ??2@YAPAXI@Z               0040337e f   MSVCRT:MSVCR90.dll
+ 0001:00002384       ??3@YAXPAX@Z               00403384 f   MSVCRT:MSVCR90.dll
+ 0001:0000238a       ??_Etype_info@@UAEPAXI@Z   0040338a f i MSVCRT:ti_inst.obj
+ 0001:000023d6       _exit                      004033d6 f   MSVCRT:MSVCR90.dll
+ 0001:000023dc       _printf                    004033dc f   MSVCRT:MSVCR90.dll
+ 0001:00002684       _mainCRTStartup            00403684 f   MSVCRT:crtexe.obj
+ 0001:0000268e       ___report_gsfailure        0040368e f   MSVCRT:gs_report.obj
+ 0001:00002794       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 00403794 f   MSVCRT:ehvecdtr.obj
+ 0001:000027f2       ??_M@YGXPAXIHP6EX0@Z@Z     004037f2 f   MSVCRT:ehvecdtr.obj
+ 0001:00002855       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 00403855 f   MSVCRT:unhandld.obj
+ 0001:00002897       ___CxxSetUnhandledExceptionFilter 00403897 f   MSVCRT:unhandld.obj
+ 0001:000028a6       __amsg_exit                004038a6 f   MSVCRT:MSVCR90.dll
+ 0001:000028ac       __onexit                   004038ac f   MSVCRT:atonexit.obj
+ 0001:00002951       _atexit                    00403951 f   MSVCRT:atonexit.obj
+ 0001:00002968       __RTC_Initialize           00403968 f   MSVCRT:_initsect_.obj
+ 0001:0000298e       __RTC_Terminate            0040398e f   MSVCRT:_initsect_.obj
+ 0001:000029b4       __XcptFilter               004039b4 f   MSVCRT:MSVCR90.dll
+ 0001:000029c0       __ValidateImageBase        004039c0 f   MSVCRT:pesect.obj
+ 0001:00002a00       __FindPESection            00403a00 f   MSVCRT:pesect.obj
+ 0001:00002a50       __IsNonwritableInCurrentImage 00403a50 f   MSVCRT:pesect.obj
+ 0001:00002b0e       __initterm                 00403b0e f   MSVCRT:MSVCR90.dll
+ 0001:00002b14       __initterm_e               00403b14 f   MSVCRT:MSVCR90.dll
+ 0001:00002b1c       __SEH_prolog4              00403b1c f   MSVCRT:sehprolg4.obj
+ 0001:00002b61       __SEH_epilog4              00403b61 f   MSVCRT:sehprolg4.obj
+ 0001:00002b75       __except_handler4          00403b75 f   MSVCRT:chandler4gs.obj
+ 0001:00002b9a       __setdefaultprecision      00403b9a f   MSVCRT:fp8.obj
+ 0001:00002bc5       __matherr                  00403bc5 f   MSVCRT:merr.obj
+ 0001:00002bc5       __setargv                  00403bc5 f   MSVCRT:dllargv.obj
+ 0001:00002bc8       ___security_init_cookie    00403bc8 f   MSVCRT:gs_support.obj
+ 0001:00002c5e       __crt_debugger_hook        00403c5e f   MSVCRT:MSVCR90.dll
+ 0001:00002c64       ?terminate@@YAXXZ          00403c64 f   MSVCRT:MSVCR90.dll
+ 0001:00002c6a       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 00403c6a f   MSVCRT:MSVCR90.dll
+ 0001:00002c6a       ??1type_info@@UAE@XZ       00403c6a f   MSVCRT:MSVCR90.dll
+ 0001:00002c70       __unlock                   00403c70 f   MSVCRT:MSVCR90.dll
+ 0001:00002c76       ___dllonexit               00403c76 f   MSVCRT:MSVCR90.dll
+ 0001:00002c7c       __lock                     00403c7c f   MSVCRT:MSVCR90.dll
+ 0001:00002c82       __except_handler4_common   00403c82 f   MSVCRT:MSVCR90.dll
+ 0001:00002c88       __invoke_watson            00403c88 f   MSVCRT:MSVCR90.dll
+ 0001:00002c8e       __controlfp_s              00403c8e f   MSVCRT:MSVCR90.dll
+ 0001:00002c94       ___CxxFrameHandler3        00403c94 f   MSVCRT:MSVCR90.dll
+ 0001:00002c9a       __EH_prolog3               00403c9a f   MSVCRT:ehprolg3.obj
+ 0001:00002ccd       __EH_prolog3_catch         00403ccd f   MSVCRT:ehprolg3.obj
+ 0001:00002d03       __EH_epilog3               00403d03 f   MSVCRT:ehprolg3.obj
  0002:00000000       __imp__Sleep@4             00404000     kernel32:KERNEL32.dll
  0002:00000004       __imp__InterlockedCompareExchange@12 00404004     kernel32:KERNEL32.dll
  0002:00000008       __imp__TerminateProcess@8  00404008     kernel32:KERNEL32.dll
@@ -210,53 +210,206 @@
  0002:00000150       ___xc_z                    00404150     MSVCRT:cinitexe.obj
  0002:00000154       ___xi_a                    00404154     MSVCRT:cinitexe.obj
  0002:00000160       ___xi_z                    00404160     MSVCRT:cinitexe.obj
- 0002:000004c0       ??_C@_0P@GHFPNOJB@bad?5allocation?$AA@ 004044c0     msvcprt:newaop_s.obj
  0002:000004d4       ??_7type_info@@6B@         004044d4     MSVCRT:ti_inst.obj
- 0002:00000df4       ??_7FileOp@@6B@            00404df4     Option.obj
- 0002:00000df8       ??_8FileOp@@7B?$basic_istream@DU?$char_traits@D@std@@@std@@@ 00404df8     Option.obj
- 0002:00000e00       ??_8FileOp@@7B?$basic_ostream@DU?$char_traits@D@std@@@std@@@ 00404e00     Option.obj
- 0002:00000e08       ??_R4type_info@@6B@        00404e08     MSVCRT:ti_inst.obj
- 0002:00000e1c       ??_R3type_info@@8          00404e1c     MSVCRT:ti_inst.obj
- 0002:00000e2c       ??_R2type_info@@8          00404e2c     MSVCRT:ti_inst.obj
- 0002:00000e34       ??_R1A@?0A@EA@type_info@@8 00404e34     MSVCRT:ti_inst.obj
- 0002:00000e50       ??_R4FileOp@@6B@           00404e50     Option.obj
- 0002:00000e64       ??_R3FileOp@@8             00404e64     Option.obj
- 0002:00000e74       ??_R2FileOp@@8             00404e74     Option.obj
- 0002:00000ea4       ??_R1A@?0A@EA@?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ea4     Option.obj
- 0002:00000ec0       ??_R3?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ec0     Option.obj
- 0002:00000ed0       ??_R2?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404ed0     Option.obj
- 0002:00000efc       ??_R1A@?0A@EA@?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404efc     Option.obj
- 0002:00000f18       ??_R3?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404f18     Option.obj
- 0002:00000f28       ??_R2?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404f28     Option.obj
- 0002:00000f50       ??_R17?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f50     Option.obj
- 0002:00000f6c       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f6c     Option.obj
- 0002:00000f7c       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f7c     Option.obj
- 0002:00000f90       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f90     Option.obj
- 0002:00000fac       ??_R1A@?0A@EA@?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fac     Option.obj
- 0002:00000fc8       ??_R3?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fc8     Option.obj
- 0002:00000fd8       ??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404fd8     Option.obj
- 0002:00000fec       ??_R13A@3EA@?$_Iosb@H@std@@8 00404fec     Option.obj
- 0002:00001008       ??_R1A@A@3EA@ios_base@std@@8 00405008     Option.obj
- 0002:00001024       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405024     Option.obj
- 0002:00001040       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405040     Option.obj
- 0002:00001050       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405050     Option.obj
- 0002:00001060       ??_R1A@?0A@EA@ios_base@std@@8 00405060     Option.obj
- 0002:0000107c       ??_R3ios_base@std@@8       0040507c     Option.obj
- 0002:0000108c       ??_R2ios_base@std@@8       0040508c     Option.obj
- 0002:00001098       ??_R13?0A@EA@?$_Iosb@H@std@@8 00405098     Option.obj
- 0002:000010b4       ??_R3?$_Iosb@H@std@@8      004050b4     Option.obj
- 0002:000010c4       ??_R2?$_Iosb@H@std@@8      004050c4     Option.obj
- 0002:000010cc       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 004050cc     Option.obj
- 0002:000010e8       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 004050e8     Option.obj
- 0002:00001104       ??_R1A@?0A@EA@FileOp@@8    00405104     Option.obj
- 0002:00001120       ___rtc_iaa                 00405120     MSVCRT:_initsect_.obj
- 0002:00001124       ___rtc_izz                 00405124     MSVCRT:_initsect_.obj
- 0002:00001128       ___rtc_taa                 00405128     MSVCRT:_initsect_.obj
- 0002:0000112c       ___rtc_tzz                 0040512c     MSVCRT:_initsect_.obj
- 0002:0000134c       __IMPORT_DESCRIPTOR_MSVCP90 0040534c     msvcprt:MSVCP90.dll
- 0002:00001360       __IMPORT_DESCRIPTOR_MSVCR90 00405360     MSVCRT:MSVCR90.dll
- 0002:00001374       __IMPORT_DESCRIPTOR_KERNEL32 00405374     kernel32:KERNEL32.dll
- 0002:00001388       __NULL_IMPORT_DESCRIPTOR   00405388     msvcprt:MSVCP90.dll
+ 0002:000004e0       ??_C@_04GGPDKFMH@?1A?$CFd?$AA@ 004044e0     Option.obj
+ 0002:000004e8       ??_C@_02NKMNFJHE@?1A?$AA@  004044e8     Option.obj
+ 0002:000004ec       ??_C@_02PBOAAKLH@?1B?$AA@  004044ec     Option.obj
+ 0002:000004f0       ??_C@_04MMPKGNEM@?1C?$CFd?$AA@ 004044f0     Option.obj
+ 0002:000004f8       ??_C@_02OIPLDLPG@?1C?$AA@  004044f8     Option.obj
+ 0002:000004fc       ??_C@_02HGHIBGHI@?1M?$AA@  004044fc     Option.obj
+ 0002:00000500       ??_C@_0CC@FGIAHBJJ@?1F?5?$IDt?$ID?$EA?$IDC?$ID?$IL?$JG?$LM?$IC?$KK?$IP?$JB?$IC?$KC?$IC?D?$IC?$KA?$IC?h?$IC?$NM?$IC?$LJ?$IC?q?$IB@ 00404500     Option.obj
+ 0002:00000524       ??_C@_04HCHMKIB@?4mml?$AA@ 00404524     Option.obj
+ 0002:0000052c       ??_C@_0CI@OAKBACOI@?1F?5MML?$IDt?$ID?$EA?$IDC?$ID?$IL?$IC?$KK2?$IJ?q?$II?H?$IP?c?$IOw?$JC?h?$IC?$LD?$IC?j?$IC@ 0040452c     Option.obj
+ 0002:00000554       ??_C@_02JFIMMPLD@?1F?$AA@  00404554     Option.obj
+ 0002:00000558       ??_C@_04MIPHOIFF@?4mid?$AA@ 00404558     Option.obj
+ 0002:00000560       ??_C@_0CF@BJLEFHIL@SMF?$IDt?$ID?$EA?$IDC?$ID?$IL?$IC?$KK2?$IJ?q?$II?H?$IP?c?$IOw?$JC?h?$IC?$LD?$IC?j?$IC?$NM?$IC?$LF@ 00404560     Option.obj
+ 0002:00000588       ??_C@_06NNOJKKP@SMF?5?$DN?5?$AA@ 00404588     Option.obj
+ 0002:00000590       ??_C@_06HAIPGFJN@MML?5?$DN?5?$AA@ 00404590     Option.obj
+ 0002:00000598       ??_C@_0BJ@OJODEHJ@?$IDI?$IDv?$IDV?$ID?$IH?$ID?$JD?$IC?$KK?$JFs?$JA?$LD?$IC?E?$IC?$LH?$IBB?$IBF?$AA@ 00404598     Option.obj
+ 0002:000005b8       ??_7FileOp@@6B@            004045b8     Option.obj
+ 0002:000005bc       ??_8FileOp@@7B?$basic_istream@DU?$char_traits@D@std@@@std@@@ 004045bc     Option.obj
+ 0002:000005c4       ??_8FileOp@@7B?$basic_ostream@DU?$char_traits@D@std@@@std@@@ 004045c4     Option.obj
+ 0002:000005cc       ??_C@_00CNPNBAHC@?$AA@     004045cc     Option.obj
+ 0002:000005d0       ??_C@_0CB@BBBMOEJO@SMF?$IDt?$ID?$EA?$IDC?$ID?$IL?$IC?L?$IDf?$IB?$FL?$ID?$FO?$IC?$KK?$JFs?$JA?$LD?$IC?E?$IC?$LH?$IBB?6@ 004045d0     smf2mml.obj
+ 0002:000005f4       ??_C@_0BM@KEEKJGIG@MThd?$ID?$GA?$ID?$ID?$ID?$JD?$IDN?$IC?$KK?$IC?$KA?$IC?h?$IC?$NM?$IC?$LJ?$IC?q?$IBB?6?$AA@ 004045f4     smfMThd.obj
+ 0002:00000610       ??_C@_0CC@PFNCBBBO@Format?52?$IC?I?$IC?M?$JB?N?$IJ?$JO?$IC?$LF?$IC?D?$IC?$KI?$IC?h?$IC?$NM?$IC?$LJ?$IC?q?$IBB@ 00404610     smfMThd.obj
+ 0002:00000634       ??_C@_0BK@HPJKPPAB@?$JG?$KC?$JCm?$IC?L?$IDt?$IDH?$IB?$FL?$ID?$HN?$IDb?$IDg?$IC?E?$IC?$LH?$IBB?6?$AA@ 00404634     smfMThd.obj
+ 0002:00000650       ??_C@_0BF@LCNEAMAI@?$IDg?$ID?$IJ?$IDb?$IDN?$JA?$JE?$IC?$KK0?$IC?E?$IC?$LH?$IBB?6?$AA@ 00404650     smfMThd.obj
+ 0002:00000668       ??_C@_0CM@LPEEANCL@Format?50?$IC?H?$IC?L?$IC?I?$IBA?$JF?$KB?$JA?$JE?$IC?L?$IDg?$ID?$IJ?$IDb?$IDN?$IC?$KK@ 00404668     smfMThd.obj
+ 0002:00000694       ??_C@_0BH@PMNOJLNE@timebase?$IC?$KK0tick?$IC?E?$IC?$LH?$IBB?6?$AA@ 00404694     smfMThd.obj
+ 0002:000006ac       ??_C@_0CK@CDNBAHBP@?$JFb?$IOw?$JC?h?$IC?L?$IO?$JO?$IK?T?$JCP?$II?J?$IC?I?$IC?M?$JB?N?$IJ?$JO?$IC?$LF?$IC?D?$IC?$KI?$IC?h@ 004046ac     smfMThd.obj
+ 0002:000006d8       ??_C@_0P@GHFPNOJB@bad?5allocation?$AA@ 004046d8     stdafx.obj
+ 0002:000006e8       ??_C@_0BD@BOALOIFA@?$CJ?$DL?7?$IDQ?$IB?$FL?$IDg100?7h?91?6?7?$AA@ 004046e8     unMMLcompiler.obj
+ 0002:000006fc       ??_C@_0M@BJOOMNIM@?$ID?$GA?$ID?$ID?$ID?$JD?$IDl?$ID?$IL?$CI?$AA@ 004046fc     unMMLcompiler.obj
+ 0002:00000708       ??_C@_0O@KFIHGAGC@?$CJ?$DL?7q100?5h?91?6?7?$AA@ 00404708     unMMLcompiler.obj
+ 0002:00000718       ??_C@_03HEMOKFOC@CH?$CI?$AA@ 00404718     unMMLcompiler.obj
+ 0002:0000071c       ??_C@_08PGKBPJJO@?$IDg?$ID?$IJ?$IDb?$IDN?$AA@ 0040471c     unMMLcompiler.obj
+ 0002:00000728       ??_C@_02ODIGJPFH@TR?$AA@   00404728     unMMLcompiler.obj
+ 0002:0000072c       ??_C@_0BH@FEJLKCMC@?6?$IO?$JO?$IK?T?$IBi?$ICP?$IBF?$ICP?$IBF?$ICO?$IBj?$DL?6?7?$AA@ 0040472c     unMMLcompiler.obj
+ 0002:00000744       ??_C@_0BA@EOGGDBEG@?6Time?$CI1?31?30?$CJ?$DL?6?7?$AA@ 00404744     unMMLcompiler.obj
+ 0002:00000754       ??_C@_04HFOOFBGC@?$JE?$IP?$IOq?$AA@ 00404754     unMMLcompiler.obj
+ 0002:0000075c       ??_C@_0O@HBFLDILI@TimeSignature?$AA@ 0040475c     unMMLcompiler.obj
+ 0002:0000076c       ??_C@_06LKBOFJCM@?$IDe?$ID?$JD?$ID?$HM?$AA@ 0040476c     unMMLcompiler.obj
+ 0002:00000774       ??_C@_05PHCINMGG@Tempo?$AA@ 00404774     unMMLcompiler.obj
+ 0002:0000077c       ??_C@_04PNPMGKHO@?$IL?H?$JG?$LM?$AA@ 0040477c     unMMLcompiler.obj
+ 0002:00000784       ??_C@_0L@EONGMEPK@TrackName?$DN?$AA@ 00404784     unMMLcompiler.obj
+ 0002:00000790       ??_C@_04LEKHBDFG@?$IN?l?$IO?R?$AA@ 00404790     unMMLcompiler.obj
+ 0002:00000798       ??_C@_0L@BOEEHN@Copyright?$DN?$AA@ 00404798     unMMLcompiler.obj
+ 0002:000007a4       ??_C@_08KNEDMIMD@?$IDR?$ID?$IB?$ID?$JD?$IDg?$AA@ 004047a4     unMMLcompiler.obj
+ 0002:000007b0       ??_C@_09DFEILFNE@MetaText?$DN?$AA@ 004047b0     unMMLcompiler.obj
+ 0002:000007bc       ??_C@_04LOGBILGC@?$IJ?$LJ?$JAF?$AA@ 004047bc     unMMLcompiler.obj
+ 0002:000007c4       ??_C@_05JLLNAHDI@Voice?$AA@ 004047c4     unMMLcompiler.obj
+ 0002:000007cc       ??_C@_04CDJCENHF@?$IB?$KK?$IB?$KK?$AA@ 004047cc     unMMLcompiler.obj
+ 0002:000007d4       ??_C@_02LEKBADDJ@?$IB?$KK?$AA@ 004047d4     unMMLcompiler.obj
+ 0002:000007d8       ??_C@_02KNLKDCHI@?$IB?$KL?$AA@ 004047d8     unMMLcompiler.obj
+ 0002:000007dc       ??_C@_04ICDFBLFB@?$IB?$KL?$IB?$KL?$AA@ 004047dc     unMMLcompiler.obj
+ 0002:000007e4       ??_C@_04BKHONDIJ@?$IJ?$LJ?$IKK?$AA@ 004047e4     unMMLcompiler.obj
+ 0002:000007ec       ??_C@_02GPIOPFAK@?$DO?$DO?$AA@ 004047ec     unMMLcompiler.obj
+ 0002:000007f0       ??_C@_01PPODPGHN@?$DO?$AA@ 004047f0     unMMLcompiler.obj
+ 0002:000007f4       ??_C@_01MNNFJEPP@?$DM?$AA@ 004047f4     unMMLcompiler.obj
+ 0002:000007f8       ??_C@_02FODMEDOG@?$DM?$DM?$AA@ 004047f8     unMMLcompiler.obj
+ 0002:000007fc       ??_C@_01FMEDJKGI@o?$AA@    004047fc     unMMLcompiler.obj
+ 0002:00000800       ??_C@_04CMBIEKKA@?$IJ?$LJ?$JH?J?$AA@ 00404800     unMMLcompiler.obj
+ 0002:00000808       ??_C@_01MHEDDDHA@v?$AA@    00404808     unMMLcompiler.obj
+ 0002:0000080c       ??_C@_02NPNIOFCE@?$IB?s?$AA@ 0040480c     unMMLcompiler.obj
+ 0002:00000810       ??_C@_01JOAMLHOP@?9?$AA@   00404810     unMMLcompiler.obj
+ 0002:00000814       ??_C@_02PFGEBIEE@?$IB?$JE?$AA@ 00404814     unMMLcompiler.obj
+ 0002:00000818       ??_C@_01MIFGBAGJ@?$CL?$AA@ 00404818     unMMLcompiler.obj
+ 0002:0000081c       ??_C@_02PCMHJOG@?$IDV?$AA@ 0040481c     unMMLcompiler.obj
+ 0002:00000820       ??_C@_02JIMKADG@?$ID?$IJ?$AA@ 00404820     unMMLcompiler.obj
+ 0002:00000824       ??_C@_02PFMDJBGM@?$ID?2?$AA@ 00404824     unMMLcompiler.obj
+ 0002:00000828       ??_C@_04DIMMBPLH@?$IDt?$ID?$EA?$AA@ 00404828     unMMLcompiler.obj
+ 0002:00000830       ??_C@_02FCHBNHEM@?$ID?$HO?$AA@ 00404830     unMMLcompiler.obj
+ 0002:00000834       ??_C@_02HEPLFEHD@?$ID?$IM?$AA@ 00404834     unMMLcompiler.obj
+ 0002:00000838       ??_C@_02EOOJGCJL@?$IDh?$AA@ 00404838     unMMLcompiler.obj
+ 0002:0000083c       ??_C@_01OJONOECF@b?$AA@    0040483c     unMMLcompiler.obj
+ 0002:00000840       ??_C@_01MCMALHOG@a?$AA@    00404840     unMMLcompiler.obj
+ 0002:00000844       ??_C@_01JEJKBAGA@g?$AA@    00404844     unMMLcompiler.obj
+ 0002:00000848       ??_C@_01INIBCBCB@f?$AA@    00404848     unMMLcompiler.obj
+ 0002:0000084c       ??_C@_01KGKMHCOC@e?$AA@    0040484c     unMMLcompiler.obj
+ 0002:00000850       ??_C@_01LPLHEDKD@d?$AA@    00404850     unMMLcompiler.obj
+ 0002:00000854       ??_C@_01PAPGNFGE@c?$AA@    00404854     unMMLcompiler.obj
+ 0002:00000858       ??_C@_02OPKIDJPP@?$IC?q?$AA@ 00404858     unMMLcompiler.obj
+ 0002:0000085c       ??_C@_01KDCPPGHE@r?$AA@    0040485c     unMMLcompiler.obj
+ 0002:00000860       ??_C@_02LJAGNDMF@?$IB?$FL?$AA@ 00404860     unMMLcompiler.obj
+ 0002:00000864       ??_C@_01JKBOJNNK@?$FO?$AA@ 00404864     unMMLcompiler.obj
+ 0002:00000868       ??_C@_0BM@KMCAMEDC@MTrk?$ID?$GA?$ID?$ID?$ID?$JD?$IDN?$IC?$KK?$IC?$KA?$IC?h?$IC?$NM?$IC?$LJ?$IC?q?$IBB?6?$AA@ 00404868     unMMLcompiler.obj
+ 0002:00000884       ??_C@_01EPMOAMKG@$?$AA@    00404884     unMMLcompiler.obj
+ 0002:00000888       ??_C@_02NMOLBIHC@?6?7?$AA@ 00404888     unMMLcompiler.obj
+ 0002:0000088c       ??_C@_01KMDKNFGN@?1?$AA@   0040488c     unMMLcompiler.obj
+ 0002:00000890       ??_C@_0M@JGIJMONG@?1?1Rhythm?5?$DN?5?$AA@ 00404890     unMMLcompiler.obj
+ 0002:0000089c       ??_C@_03CPJKEFBE@?7?$HM?7?$AA@ 0040489c     unMMLcompiler.obj
+ 0002:00000930       ??_C@_05ONFLABKM@?5Sub?$HL?$AA@ 00404930     unMMLcompiler.obj
+ 0002:00000938       ??_C@_01CELHOKLL@?$HN?$AA@ 00404938     unMMLcompiler.obj
+ 0002:0000093c       ??_C@_03LODLOOIE@?$CJ?$DL?5?$AA@ 0040493c     unMMLcompiler.obj
+ 0002:00000940       ??_C@_01IHBHIGKO@?0?$AA@   00404940     unMMLcompiler.obj
+ 0002:00000944       ??_C@_06HFMEKLDD@Voice?$CI?$AA@ 00404944     unMMLcompiler.obj
+ 0002:0000094c       ??_C@_02LNAEAIDO@?$DL?5?$AA@ 0040494c     unMMLcompiler.obj
+ 0002:00000950       ??_C@_01EANLCPLP@y?$AA@    00404950     unMMLcompiler.obj
+ 0002:00000954       ??_C@_02CFKBJGNE@M?$CI?$AA@ 00404954     unMMLcompiler.obj
+ 0002:00000958       ??_C@_03CDFOAHIH@PT?$CI?$AA@ 00404958     unMMLcompiler.obj
+ 0002:0000095c       ??_C@_08KNOPKAI@DataMSB?$CI?$AA@ 0040495c     unMMLcompiler.obj
+ 0002:00000968       ??_C@_02DFNCNKEF@V?$CI?$AA@ 00404968     unMMLcompiler.obj
+ 0002:0000096c       ??_C@_02DBFPKGPH@P?$CI?$AA@ 0040496c     unMMLcompiler.obj
+ 0002:00000970       ??_C@_03EDJAAIPG@EP?$CI?$AA@ 00404970     unMMLcompiler.obj
+ 0002:00000974       ??_C@_03CGBBBBAC@PS?$CI?$AA@ 00404974     unMMLcompiler.obj
+ 0002:00000978       ??_C@_07PMBHIHN@Reverb?$CI?$AA@ 00404978     unMMLcompiler.obj
+ 0002:00000980       ??_C@_07KICNMBDH@Chorus?$CI?$AA@ 00404980     unMMLcompiler.obj
+ 0002:00000988       ??_C@_04JPEDFJKF@VAR?$CI?$AA@ 00404988     unMMLcompiler.obj
+ 0002:00000990       ??_C@_05NFOIKICJ@NRPN?$CI?$AA@ 00404990     unMMLcompiler.obj
+ 0002:00000998       ??_C@_03NNMDOECB@BR?$CI?$AA@ 00404998     unMMLcompiler.obj
+ 0002:0000099c       ??_C@_09NGLAEFF@FineTune?$CI?$AA@ 0040499c     unMMLcompiler.obj
+ 0002:000009a8       ??_C@_0M@HFEPENEN@CoarseTune?$CI?$AA@ 004049a8     unMMLcompiler.obj
+ 0002:000009b4       ??_C@_04JHFKJFIL@RPN?$CI?$AA@ 004049b4     unMMLcompiler.obj
+ 0002:000009bc       ??_C@_0BJ@LEOPDECJ@?$DL?6?6Include?$CIstdmsg?4h?$CJ?$DL?6?6?6?$AA@ 004049bc     unMMLcompiler.obj
+ 0002:000009d8       ??_C@_0DD@BMFEDCCK@?6?1?1?6System?4ControllerShift?5?$DN?50?$DL?6@ 004049d8     unMMLcompiler.obj
+ 0002:00000a0c       ??_C@_0N@NMINMMDI@?6?1?1?7Track?5?$DN?5?$AA@ 00404a0c     unMMLcompiler.obj
+ 0002:00000a1c       ??_C@_0O@LLAAFNJK@?6?1?1?7Format?5?$DN?5?$AA@ 00404a1c     unMMLcompiler.obj
+ 0002:00000a30       ??_C@_0HN@EHCMNHOE@?1?1?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9@ 00404a30     unMMLcompiler.obj
+ 0002:00000ab0       ??_C@_03HFFICBOL@mi?3?$AA@ 00404ab0     unMMLcompiler.obj
+ 0002:00000ab4       ??_C@_01GPOEFGEJ@?7?$AA@   00404ab4     unMMLcompiler.obj
+ 0002:00000ab8       ??_C@_04GEIPOLCN@Key?3?$AA@ 00404ab8     unMMLcompiler.obj
+ 0002:00000ac0       ??_C@_07KDLNCCCL@Length?3?$AA@ 00404ac0     unMMLcompiler.obj
+ 0002:00000ac8       ??_C@_08DMMJFMFF@Pointer?3?$AA@ 00404ac8     unMMLcompiler.obj
+ 0002:00000adc       ??_C@_0BJ@KOOJJKNI@DirectSMF?$CI$A0?$CLChannel?91?0?$AA@ 00404adc     unMMLcompiler.obj
+ 0002:00000af8       ??_C@_01ODHLEDKK@?$CI?$AA@ 00404af8     unMMLcompiler.obj
+ 0002:00000afc       ??_C@_0BJ@CKEKPELF@DirectSMF?$CI$D0?$CLChannel?91?0?$AA@ 00404afc     unMMLcompiler.obj
+ 0002:00000b18       ??_C@_0L@FAHOJFLC@PitchBend?$CI?$AA@ 00404b18     unMMLcompiler.obj
+ 0002:00000b24       ??_C@_0BP@LFOLJFCK@?$JG?$LD?$IM?x?$IC?HChannel?5Voice?5Message?$IBB?6?$AA@ 00404b24     unMMLcompiler.obj
+ 0002:00000b44       ??_C@_0N@JAKGDJF@SysEx?5?$DN?5$F0?0?$AA@ 00404b44     unMMLcompiler.obj
+ 0002:00000b54       ??_C@_03CFMEGBNM@?$DL?6?7?$AA@ 00404b54     unMMLcompiler.obj
+ 0002:00000b58       ??_C@_08LDIEBLGB@SysEx?5?$DN?5?$AA@ 00404b58     unMMLcompiler.obj
+ 0002:00000b64       ??_C@_0BH@BBAHIGAL@DirectSMF?$CI$FF?0$00?0$02?0?$AA@ 00404b64     unMMLcompiler.obj
+ 0002:00000b7c       ??_C@_0BI@JAFDBOGK@?$JG?$LD?$IM?x?$IC?H?$IDV?$IB?$FL?$IDP?$ID?$JD?$IDX?$JE?T?$IN?$IG?$IBB?6?$AA@ 00404b7c     unMMLcompiler.obj
+ 0002:00000b94       ??_C@_01HCONENDN@?$HL?$AA@ 00404b94     unMMLcompiler.obj
+ 0002:00000b98       ??_C@_04MDOAGNKD@?$HN?$DL?6?7?$AA@ 00404b98     unMMLcompiler.obj
+ 0002:00000ba0       ??_C@_0BB@NLALEGFI@InstrumentName?$DN?$HL?$AA@ 00404ba0     unMMLcompiler.obj
+ 0002:00000bb4       ??_C@_07IGDMFFCJ@Lyric?$DN?$HL?$AA@ 00404bb4     unMMLcompiler.obj
+ 0002:00000bbc       ??_C@_03PKFEHGHB@?$HN?$DL?5?$AA@ 00404bbc     unMMLcompiler.obj
+ 0002:00000bc0       ??_C@_08EDDCNHGL@Marker?$DN?$HL?$AA@ 00404bc0     unMMLcompiler.obj
+ 0002:00000bcc       ??_C@_0L@PIECACIL@CuePoint?$DN?$HL?$AA@ 00404bcc     unMMLcompiler.obj
+ 0002:00000bd8       ??_C@_0P@PABIMBHP@ChannelPrefix?$CI?$AA@ 00404bd8     unMMLcompiler.obj
+ 0002:00000be8       ??_C@_0CC@NDMLPPKE@?$JG?$LD?$IM?x?$IC?H?$ID?$GA?$ID?$ID?$ID?$JD?$IDl?$ID?$IL?$IDv?$ID?$IK?$IDt?$IDB?$IDb?$IDN?$IDX?$IBB@ 00404be8     unMMLcompiler.obj
+ 0002:00000c0c       ??_C@_05JGECLAAG@Port?$CI?$AA@ 00404c0c     unMMLcompiler.obj
+ 0002:00000c14       ??_C@_0BE@BHOGMMME@?$JG?$LD?$IM?x?$IC?H?$ID?$HM?$IB?$FL?$IDg?$JE?T?$IN?$IG?$IBB?6?$AA@ 00404c14     unMMLcompiler.obj
+ 0002:00000c28       ??_C@_0BG@IPGDEJLK@?$JG?$LD?$IM?x?$IC?HEnd?5of?5Track?$IBB?6?$AA@ 00404c28     unMMLcompiler.obj
+ 0002:00000c40       ??_C@_04OHDAEKI@?$CJ?$DL?6?7?$AA@ 00404c40     unMMLcompiler.obj
+ 0002:00000c48       ??_C@_0P@PJMDBBDJ@?$JG?$LD?$IM?x?$IC?HTempo?$IBB?6?$AA@ 00404c48     unMMLcompiler.obj
+ 0002:00000c58       ??_C@_0BH@KIOHLKPJ@DirectSMF?$CI$FF?0$54?0$05?0?$AA@ 00404c58     unMMLcompiler.obj
+ 0002:00000c70       ??_C@_0BJ@NMPACFMO@?$JG?$LD?$IM?x?$IC?HSMPTE?$IDI?$IDt?$IDZ?$IDb?$IDg?$IBB?6?$AA@ 00404c70     unMMLcompiler.obj
+ 0002:00000c8c       ??_C@_0O@HHDEJKGP@?$JG?$LD?$IM?x?$IC?H?$JE?$IP?$IOq?$IBB?6?$AA@ 00404c8c     unMMLcompiler.obj
+ 0002:00000c9c       ??_C@_0BH@MMHPMNLM@DirectSMF?$CI$FF?0$59?0$02?0?$AA@ 00404c9c     unMMLcompiler.obj
+ 0002:00000cb4       ??_C@_0O@EGPKJJJ@?$JG?$LD?$IM?x?$IC?H?$JC?$LC?$IN?$IG?$IBB?6?$AA@ 00404cb4     unMMLcompiler.obj
+ 0002:00000cc4       ??_C@_0BD@MGHFCJOE@DirectSMF?$CI$FF?0$7F?0?$AA@ 00404cc4     unMMLcompiler.obj
+ 0002:00000cd8       ??_C@_0BC@LFDHCDEJ@?$JG?$LD?$IM?x?$IC?HMeta?5Event?6?$AA@ 00404cd8     unMMLcompiler.obj
+ 0002:00000d04       ??_C@_03PKHNHBGP@?$CJ?$DL?7?$AA@ 00404d04     unMMLcompiler.obj
+ 0002:00000d08       ??_C@_0CE@MNAFALAP@?$JG?$LD?$IM?x?$IC?HMIDI?$IDC?$IDx?$ID?$JD?$IDg?$IC?p?$IM?$JP?$IPo?$IC?$LF?$IC?$NM?$IC?$LF?$IC?$LN@ 00404d08     unMMLcompiler.obj
+ 0002:00000d34       ??_C@_02LJALELK@?$CJ?$DL?$AA@ 00404d34     unMMLcompiler.obj
+ 0002:00000d38       ??_C@_0L@LEAAANNC@?1?1?7Size?5?$DN?5?$AA@ 00404d38     unMMLcompiler.obj
+ 0002:00000d44       ??_C@_0BE@LCDLHOGK@?1?1MTrk?5Infomation?5?3?$AA@ 00404d44     unMMLcompiler.obj
+ 0002:00000d58       ??_C@_0CJ@IEAIIKLH@?1?1?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9@ 00404d58     unMMLcompiler.obj
+ 0002:00000d84       ??_R4type_info@@6B@        00404d84     MSVCRT:ti_inst.obj
+ 0002:00000d98       ??_R3type_info@@8          00404d98     MSVCRT:ti_inst.obj
+ 0002:00000da8       ??_R2type_info@@8          00404da8     MSVCRT:ti_inst.obj
+ 0002:00000db0       ??_R1A@?0A@EA@type_info@@8 00404db0     MSVCRT:ti_inst.obj
+ 0002:00000dcc       ??_R4FileOp@@6B@           00404dcc     Option.obj
+ 0002:00000de0       ??_R3FileOp@@8             00404de0     Option.obj
+ 0002:00000df0       ??_R2FileOp@@8             00404df0     Option.obj
+ 0002:00000e20       ??_R1A@?0A@EA@?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404e20     Option.obj
+ 0002:00000e3c       ??_R3?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404e3c     Option.obj
+ 0002:00000e4c       ??_R2?$basic_fstream@DU?$char_traits@D@std@@@std@@8 00404e4c     Option.obj
+ 0002:00000e78       ??_R1A@?0A@EA@?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404e78     Option.obj
+ 0002:00000e94       ??_R3?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404e94     Option.obj
+ 0002:00000ea4       ??_R2?$basic_iostream@DU?$char_traits@D@std@@@std@@8 00404ea4     Option.obj
+ 0002:00000ecc       ??_R17?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404ecc     Option.obj
+ 0002:00000ee8       ??_R3?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404ee8     Option.obj
+ 0002:00000ef8       ??_R2?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404ef8     Option.obj
+ 0002:00000f0c       ??_R1A@?0A@EA@?$basic_ostream@DU?$char_traits@D@std@@@std@@8 00404f0c     Option.obj
+ 0002:00000f28       ??_R1A@?0A@EA@?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404f28     Option.obj
+ 0002:00000f44       ??_R3?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404f44     Option.obj
+ 0002:00000f54       ??_R2?$basic_istream@DU?$char_traits@D@std@@@std@@8 00404f54     Option.obj
+ 0002:00000f68       ??_R13A@3EA@?$_Iosb@H@std@@8 00404f68     Option.obj
+ 0002:00000f84       ??_R1A@A@3EA@ios_base@std@@8 00404f84     Option.obj
+ 0002:00000fa0       ??_R1A@A@3FA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 00404fa0     Option.obj
+ 0002:00000fbc       ??_R3?$basic_ios@DU?$char_traits@D@std@@@std@@8 00404fbc     Option.obj
+ 0002:00000fcc       ??_R2?$basic_ios@DU?$char_traits@D@std@@@std@@8 00404fcc     Option.obj
+ 0002:00000fdc       ??_R1A@?0A@EA@ios_base@std@@8 00404fdc     Option.obj
+ 0002:00000ff8       ??_R3ios_base@std@@8       00404ff8     Option.obj
+ 0002:00001008       ??_R2ios_base@std@@8       00405008     Option.obj
+ 0002:00001014       ??_R13?0A@EA@?$_Iosb@H@std@@8 00405014     Option.obj
+ 0002:00001030       ??_R3?$_Iosb@H@std@@8      00405030     Option.obj
+ 0002:00001040       ??_R2?$_Iosb@H@std@@8      00405040     Option.obj
+ 0002:00001048       ??_R1A@?0A@EA@?$_Iosb@H@std@@8 00405048     Option.obj
+ 0002:00001064       ??_R1A@?0A@EA@?$basic_ios@DU?$char_traits@D@std@@@std@@8 00405064     Option.obj
+ 0002:00001080       ??_R1A@?0A@EA@FileOp@@8    00405080     Option.obj
+ 0002:0000109c       ___rtc_iaa                 0040509c     MSVCRT:_initsect_.obj
+ 0002:000010a0       ___rtc_izz                 004050a0     MSVCRT:_initsect_.obj
+ 0002:000010a4       ___rtc_taa                 004050a4     MSVCRT:_initsect_.obj
+ 0002:000010a8       ___rtc_tzz                 004050a8     MSVCRT:_initsect_.obj
+ 0002:000012cc       __IMPORT_DESCRIPTOR_MSVCP90 004052cc     msvcprt:MSVCP90.dll
+ 0002:000012e0       __IMPORT_DESCRIPTOR_MSVCR90 004052e0     MSVCRT:MSVCR90.dll
+ 0002:000012f4       __IMPORT_DESCRIPTOR_KERNEL32 004052f4     kernel32:KERNEL32.dll
+ 0002:00001308       __NULL_IMPORT_DESCRIPTOR   00405308     msvcprt:MSVCP90.dll
  0003:00000004       ??_R0?AVtype_info@@@8      00407004     MSVCRT:ti_inst.obj
  0003:0000001c       ___security_cookie         0040701c     MSVCRT:gs_cookie.obj
  0003:00000020       ___security_cookie_complement 00407020     MSVCRT:gs_cookie.obj
@@ -272,43 +425,42 @@
  0003:0000011c       ??_R0?AV?$basic_iostream@DU?$char_traits@D@std@@@std@@@8 0040711c     Option.obj
  0003:00000158       ??_R0?AV?$basic_fstream@DU?$char_traits@D@std@@@std@@@8 00407158     Option.obj
  0003:00000194       ??_R0?AVFileOp@@@8         00407194     Option.obj
- 0003:000004f4       __forceCRTManifestRTM      004074f4     MSVCRT:crtmanifestrtm.obj
- 0003:000004f8       __dowildcard               004074f8     MSVCRT:wildcard.obj
- 0003:000004fc       __newmode                  004074fc     MSVCRT:_newmode.obj
- 0003:00000500       __commode                  00407500     MSVCRT:xncommod.obj
- 0003:00000504       __fmode                    00407504     MSVCRT:xtxtmode.obj
- 0003:00000508       ___@@_PchSym_@00@UkilqvxgUhnuCnnoUhnuCnnoUivovzhvUhgwzucOlyq@ 00407508     stdafx.obj
- 0003:0000050c       __adjust_fdiv              0040750c     <common>
- 0003:00000510       ___native_startup_state    00407510     <common>
- 0003:00000514       ___native_startup_lock     00407514     <common>
- 0003:00000518       ___onexitend               00407518     <common>
- 0003:0000051c       ___onexitbegin             0040751c     <common>
- 0003:00000520       ___dyn_tls_init_callback   00407520     <common>
+ 0003:0000051c       __dowildcard               0040751c     MSVCRT:wildcard.obj
+ 0003:00000520       __newmode                  00407520     MSVCRT:_newmode.obj
+ 0003:00000524       __commode                  00407524     MSVCRT:xncommod.obj
+ 0003:00000528       __fmode                    00407528     MSVCRT:xtxtmode.obj
+ 0003:0000052c       ___@@_PchSym_@00@UKltKorKpyKlqKrwKprKlsKpkKpvKluKrkKoxUnbLkilqvxgUhnuCnnoUhnuCnnoUivovzhvUhgwzucOlyq@ 0040752c     stdafx.obj
+ 0003:00000530       __adjust_fdiv              00407530     <common>
+ 0003:00000534       ___native_startup_state    00407534     <common>
+ 0003:00000538       ___native_startup_lock     00407538     <common>
+ 0003:0000053c       ___onexitend               0040753c     <common>
+ 0003:00000540       ___onexitbegin             00407540     <common>
+ 0003:00000544       ___dyn_tls_init_callback   00407544     <common>
 
- entry point at        0001:00002578
+ entry point at        0001:00002684
 
  Static symbols
 
- 0001:000005b4       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 004015b4 f i  CIL library: CIL module
- 0001:000022d6       _pre_cpp_init              004032d6 f   MSVCRT:crtexe.obj
- 0001:00002321       ___tmainCRTStartup         00403321 f   MSVCRT:crtexe.obj
- 0001:00002497       _pre_c_init                00403497 f   MSVCRT:crtexe.obj
- 0001:00002c07       __unwindfunclet$??_GFileOp@@UAEPAXI@Z$0 00403c07 f    CIL library: CIL module
- 0001:00002c13       __ehhandler$??_GFileOp@@UAEPAXI@Z 00403c13 f    CIL library: CIL module
- 0001:00002c2e       __unwindfunclet$??0FileOp@@QAE@XZ$0 00403c2e f    CIL library: CIL module
- 0001:00002c4b       __unwindfunclet$??0FileOp@@QAE@XZ$1 00403c4b f    CIL library: CIL module
- 0001:00002c57       __ehhandler$??0FileOp@@QAE@XZ 00403c57 f    CIL library: CIL module
- 0001:00002c72       __unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0 00403c72 f    CIL library: CIL module
- 0001:00002c72       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00403c72 f    CIL library: CIL module
- 0001:00002c7a       __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00403c7a f    CIL library: CIL module
- 0001:00002c7a       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00403c7a f    CIL library: CIL module
- 0001:00002c95       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00403c95 f    CIL library: CIL module
- 0001:00002c9f       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00403c9f f    CIL library: CIL module
- 0001:00002cba       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$0 00403cba f    CIL library: CIL module
- 0001:00002cc4       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$1 00403cc4 f    CIL library: CIL module
- 0001:00002cce       __ehhandler$??0OPSW@@QAE@HQAPAD@Z 00403cce f    CIL library: CIL module
- 0001:00002ce9       __unwindfunclet$??0unMMLcompiler@@QAE@PAVOPSW@@@Z$0 00403ce9 f    CIL library: CIL module
- 0001:00002cf4       __ehhandler$??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00403cf4 f    CIL library: CIL module
- 0001:00002d0f       __unwindfunclet$_main$0    00403d0f f    CIL library: CIL module
- 0001:00002d19       __unwindfunclet$_main$1    00403d19 f    CIL library: CIL module
- 0001:00002d23       __ehhandler$_main          00403d23 f    CIL library: CIL module
+ 0001:000005e2       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 004015e2 f i  CIL library: CIL module
+ 0001:000023e2       _pre_cpp_init              004033e2 f   MSVCRT:crtexe.obj
+ 0001:0000242d       ___tmainCRTStartup         0040342d f   MSVCRT:crtexe.obj
+ 0001:000025a3       _pre_c_init                004035a3 f   MSVCRT:crtexe.obj
+ 0001:00002d17       __unwindfunclet$??_GFileOp@@UAEPAXI@Z$0 00403d17 f    CIL library: CIL module
+ 0001:00002d23       __ehhandler$??_GFileOp@@UAEPAXI@Z 00403d23 f    CIL library: CIL module
+ 0001:00002d3e       __unwindfunclet$??0FileOp@@QAE@XZ$0 00403d3e f    CIL library: CIL module
+ 0001:00002d5b       __unwindfunclet$??0FileOp@@QAE@XZ$1 00403d5b f    CIL library: CIL module
+ 0001:00002d67       __ehhandler$??0FileOp@@QAE@XZ 00403d67 f    CIL library: CIL module
+ 0001:00002d82       __unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0 00403d82 f    CIL library: CIL module
+ 0001:00002d82       __unwindfunclet$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z$0 00403d82 f    CIL library: CIL module
+ 0001:00002d8a       __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00403d8a f    CIL library: CIL module
+ 0001:00002d8a       __ehhandler$??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z 00403d8a f    CIL library: CIL module
+ 0001:00002da5       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00403da5 f    CIL library: CIL module
+ 0001:00002daf       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00403daf f    CIL library: CIL module
+ 0001:00002dca       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$0 00403dca f    CIL library: CIL module
+ 0001:00002dd4       __unwindfunclet$??0OPSW@@QAE@HQAPAD@Z$1 00403dd4 f    CIL library: CIL module
+ 0001:00002dde       __ehhandler$??0OPSW@@QAE@HQAPAD@Z 00403dde f    CIL library: CIL module
+ 0001:00002df9       __unwindfunclet$??0unMMLcompiler@@QAE@PAVOPSW@@@Z$0 00403df9 f    CIL library: CIL module
+ 0001:00002e04       __ehhandler$??0unMMLcompiler@@QAE@PAVOPSW@@@Z 00403e04 f    CIL library: CIL module
+ 0001:00002e1f       __unwindfunclet$_main$0    00403e1f f    CIL library: CIL module
+ 0001:00002e29       __unwindfunclet$_main$1    00403e29 f    CIL library: CIL module
+ 0001:00002e33       __ehhandler$_main          00403e33 f    CIL library: CIL module

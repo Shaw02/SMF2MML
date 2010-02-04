@@ -10,6 +10,22 @@
 
 
 
+version 1.03		2010. 2. 1
+	◆バグ修正
+	・Note Offのオペコードに、"0x9n"を使用していた場合に、
+	　正常に逆MMLコンパイルが出来なかった不具合を修正。
+	◆仕様変更
+	　以下の命令を出力するようにした。
+	　但し、SMFデータ上にて、MIDIイベントが連続している必要があります。
+	・Voice(value,msb,lsb);
+	・NRPN(msb,lsb,value);
+	・RPN(msb,lsb,value);
+	・BR(value);
+	・CoarseTune(value);
+	・FineTune(value);
+
+
+
 version 1.02		2009. 7. 7
 	◆機能追加
 	・/M オプションを追加。各MIDIイベントのMML出力をマスクできます。

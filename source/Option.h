@@ -10,11 +10,12 @@ class OPSW {
 public:
 				FileOp*		SMF;			//指定したSMFファイル
 				FileOp*		MML;			//指定したMMLファイル
-				char		fHelp;			//ヘルプを指定したか？
 	unsigned	int			iBar;			// | の挿入
 	unsigned	int			iCR;			//改行を挿入する小節数
 	unsigned	int			iMaskFlag;		//出力をマスクする機能
+	unsigned	int			iAuftakt;		//アウフタクト
 	unsigned	char		cJpn;			//すととん？
+				char		fHelp;			//ヘルプを指定したか？
 
 		OPSW();								//初期化のみ
 		OPSW(int argc, _TCHAR* argv[]);		//引数内容から、クラスを初期化＆ファイルオープン
